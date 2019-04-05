@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:clickable="true"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="top"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/screen_header"
+            android:background="@drawable/gradient_toolbar"
+            android:orientation="horizontal"
+            android:weightSum="10">
+
+            <LinearLayout
+                android:id="@+id/dialogMap_backLayout"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.2"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/dialogMap_backIv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/back_button" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/dialogMap_titleTv"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="7.6"
+                android:gravity="center"
+                android:padding="@dimen/default_2x_space"
+                android:text="@string/deliveryAddress"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/default_text_xxlarge_size"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.2" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/dialogMap_hintTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                android:gravity="center"
+                android:padding="@dimen/default_2x_space"
+                android:text="@string/mapHint"
+                android:textColor="@color/colorSuvaGrey"
+                android:textSize="@dimen/default_text_large_size" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="7"
+                android:gravity="top"
+                android:orientation="vertical"
+                android:weightSum="10">
+
+                <fragment
+                    android:id="@+id/map"
+                    android:name="com.google.android.gms.maps.SupportMapFragment"
+                    class="com.google.android.gms.maps.SupportMapFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/marker" />
+
+                <Button
+                    android:id="@+id/dialogMap_confirmBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginStart="@dimen/default_2x_space"
+                    android:layout_marginEnd="@dimen/default_2x_space"
+                    android:layout_marginBottom="@dimen/default_5x_space"
+                    android:background="@drawable/bg_button_green"
+                    android:padding="@dimen/default_2x_space"
+                    android:text="@string/confirmAddress"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/default_text_xlarge_size" />
+
+                <ImageView
+                    android:id="@+id/dialogMap_getLocationIv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="@dimen/default_5x_space"
+                    android:layout_marginBottom="@dimen/default_20x_space"
+                    android:src="@drawable/get_location" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

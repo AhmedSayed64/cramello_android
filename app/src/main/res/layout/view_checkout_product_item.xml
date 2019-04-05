@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="@dimen/default_1x_space"
+    android:weightSum="4">
+
+    <TextView
+        android:id="@+id/checkout_product_item_nameTv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="2.5"
+        android:textDirection="locale"
+        android:textColor="@color/colorMatterhorn"
+        android:textSize="@dimen/default_text_xnormal_size" />
+
+    <TextView
+        android:id="@+id/checkout_product_item_totalPriceTv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="1.5"
+        android:gravity="end"
+        android:textDirection="locale"
+        android:textColor="@color/colorMatterhorn"
+        android:textSize="@dimen/default_text_xnormal_size" />
+
+</LinearLayout>

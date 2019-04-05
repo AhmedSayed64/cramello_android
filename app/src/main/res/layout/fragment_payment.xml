@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:clickable="true"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="top"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/screen_header"
+            android:background="@drawable/gradient_toolbar"
+            android:orientation="horizontal"
+            android:weightSum="10">
+
+            <LinearLayout
+                android:id="@+id/payment_fragment_backLayout"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.2"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/payment_activity_backIv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/back_button" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/payment_fragment_title"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="7.6"
+                android:gravity="center"
+                android:padding="@dimen/default_2x_space"
+                android:text="@string/payment"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/default_text_xxlarge_size"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.2" />
+
+
+        </LinearLayout>
+
+        <WebView
+            android:id="@+id/payment_fragment_webView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+</FrameLayout>

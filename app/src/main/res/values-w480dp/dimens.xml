@@ -1,0 +1,31 @@
+<resources>
+
+    <dimen name="default_half_space">3dp</dimen>
+    <dimen name="default_1x_space">5.5dp</dimen>
+    <dimen name="default_1.5x_space">8dp</dimen>
+    <dimen name="default_2x_space">10.5dp</dimen>
+    <dimen name="default_3x_space">15.5dp</dimen>
+    <dimen name="default_4x_space">20.5dp</dimen>
+    <dimen name="default_5x_space">27.5dp</dimen>
+    <dimen name="default_6x_space">32.5dp</dimen>
+    <dimen name="default_10x_space">55dp</dimen>
+    <dimen name="default_15x_space">82.5dp</dimen>
+    <dimen name="default_17x_space">93.5dp</dimen>
+    <dimen name="default_20x_space">110dp</dimen>
+
+    <dimen name="default_text_xxsmall_size">9sp</dimen>
+    <dimen name="default_text_xsmall_size">11sp</dimen>
+    <dimen name="default_text_small_size">14sp</dimen>
+    <dimen name="default_text_normal_size">16sp</dimen>
+    <dimen name="default_text_xnormal_size">17.5sp</dimen>
+    <dimen name="default_text_large_size">19sp</dimen>
+    <dimen name="default_text_xlarge_size">21sp</dimen>
+    <dimen name="default_text_xxlarge_size">23sp</dimen>
+    <dimen name="default_text_xxxlarge_size">26sp</dimen>
+
+    <dimen name="default_rv_padding_bottom">72dp</dimen>
+    <dimen name="sideMenu_ad_height">230dp</dimen>
+    <dimen name="map_height">200dp</dimen>
+
+    <dimen name="screen_header">65dp</dimen>
+</resources>

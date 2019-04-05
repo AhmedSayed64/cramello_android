@@ -1,0 +1,549 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/checkoutFragment_containerLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:clickable="true"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="top"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/screen_header"
+            android:background="@drawable/gradient_toolbar"
+            android:orientation="horizontal"
+            android:weightSum="10">
+
+            <LinearLayout
+                android:id="@+id/checkoutFragment_backLayout"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.2"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/checkoutFragment_backIv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/back_button" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/checkoutFragment_title"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="7.6"
+                android:gravity="center"
+                android:padding="@dimen/default_2x_space"
+                android:text="@string/checkOut"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/default_text_xxlarge_size"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.2" />
+
+
+        </LinearLayout>
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/default_3x_space">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@drawable/no_1" />
+
+                    <TextView
+                        android:id="@+id/checkoutFragment_deliveryAddressTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:padding="@dimen/default_1.5x_space"
+                        android:text="@string/deliveryAddress"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/default_text_large_size" />
+
+                </LinearLayout>
+
+                <include
+                    android:id="@+id/checkoutFragment_deliveryAddressView"
+                    layout="@layout/view_address_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/default_1x_space"
+                    android:layout_marginTop="@dimen/default_2x_space"
+                    android:layout_marginEnd="@dimen/default_1x_space"
+                    android:layout_marginBottom="@dimen/default_2x_space" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/default_2x_space"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@drawable/no_2" />
+
+                    <TextView
+                        android:id="@+id/checkoutFragment_itemsTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:padding="@dimen/default_1.5x_space"
+                        android:text="@string/items"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/default_text_large_size" />
+
+                </LinearLayout>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/checkoutFragment_itemsRv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/default_1x_space"
+                    android:clipToPadding="false" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/default_3x_space"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@drawable/no_3" />
+
+                    <TextView
+                        android:id="@+id/checkoutFragment_voucherTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:padding="@dimen/default_1.5x_space"
+                        android:text="@string/discountVoucher"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/default_text_large_size" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/default_2x_space"
+                    android:layout_marginEnd="@dimen/default_half_space"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:orientation="vertical">
+
+                        <EditText
+                            android:id="@+id/checkoutFragment_voucherCodeInput"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@android:color/transparent"
+                            android:hint="@string/voucherCode"
+                            android:inputType="text"
+                            android:paddingTop="@dimen/default_2x_space"
+                            android:paddingBottom="@dimen/default_2x_space"
+                            android:textColor="@color/colorBlack"
+                            android:textColorHint="@color/colorSuvaGrey"
+                            android:textDirection="locale"
+                            android:textSize="@dimen/default_text_large_size" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/default_line_large_size"
+                            android:layout_marginTop="@dimen/default_half_space"
+                            android:background="@color/colorSuvaGrey" />
+
+                    </LinearLayout>
+
+                    <FrameLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:layout_weight="1"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/checkoutFragment_redeemBtn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_button_trans_border_green"
+                            android:paddingStart="@dimen/default_3x_space"
+                            android:paddingTop="@dimen/default_2x_space"
+                            android:paddingEnd="@dimen/default_3x_space"
+                            android:paddingBottom="@dimen/default_2x_space"
+                            android:text="@string/redeem"
+                            android:layout_gravity="center"
+                            android:textColor="@color/colorGreen"
+                            android:textSize="@dimen/default_text_normal_size" />
+
+                        <ImageView
+                            android:id="@+id/checkoutFragment_voucherDone"
+                            android:layout_width="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_height="wrap_content"
+                            app:srcCompat="@drawable/ic_check_circle" />
+
+                    </FrameLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/default_4x_space"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@drawable/no_4" />
+
+                    <TextView
+                        android:id="@+id/checkoutFragment_payWithTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:padding="@dimen/default_1.5x_space"
+                        android:text="@string/payWith"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/default_text_large_size" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/default_2x_space"
+                    android:orientation="horizontal"
+                    android:weightSum="4">
+
+                    <LinearLayout
+                        android:id="@+id/checkoutFragment_cashLayout"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_button_trans_border_street_green"
+                        android:orientation="vertical"
+                        android:padding="@dimen/default_2x_space">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:src="@drawable/cash_icon" />
+
+                        <TextView
+                            android:id="@+id/checkoutFragment_cashTv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:paddingTop="@dimen/default_2x_space"
+                            android:text="@string/cash"
+                            android:textAllCaps="true"
+                            android:textColor="@color/colorNightRider"
+                            android:textSize="@dimen/default_text_small_size" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.2" />
+
+                    <LinearLayout
+                        android:id="@+id/checkoutFragment_knetLayout"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:padding="@dimen/default_2x_space">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:src="@drawable/knet_icon" />
+
+                        <TextView
+                            android:id="@+id/checkoutFragment_knetTv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:paddingTop="@dimen/default_2x_space"
+                            android:text="@string/knet"
+                            android:textAllCaps="true"
+                            android:textColor="@color/colorNightRider"
+                            android:textSize="@dimen/default_text_small_size" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.2" />
+
+                    <LinearLayout
+                        android:id="@+id/checkoutFragment_visaLayout"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.4"
+                        android:orientation="vertical"
+                        android:padding="@dimen/default_2x_space">
+
+                        <ImageView
+                            android:id="@+id/checkoutFragment_visaIv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:src="@drawable/mastercard_icon" />
+
+                        <TextView
+                            android:id="@+id/checkoutFragment_visaTv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:paddingTop="@dimen/default_2x_space"
+                            android:text="@string/visaMaster"
+                            android:textAllCaps="true"
+                            android:textColor="@color/colorNightRider"
+                            android:textSize="@dimen/default_text_small_size" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingStart="@dimen/default_2x_space"
+                    android:paddingTop="@dimen/default_5x_space"
+                    android:paddingEnd="@dimen/default_2x_space"
+                    android:paddingBottom="@dimen/default_half_space"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:id="@+id/checkoutFragment_subTotalTitle"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="start"
+                        android:textDirection="locale"
+                        android:text="@string/subTotal"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/default_text_large_size" />
+
+                    <TextView
+                        android:id="@+id/checkoutFragment_subTotalTv"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="end"
+                        android:textDirection="locale"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/default_text_large_size" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingStart="@dimen/default_2x_space"
+                    android:paddingTop="@dimen/default_half_space"
+                    android:paddingEnd="@dimen/default_2x_space"
+                    android:paddingBottom="@dimen/default_half_space"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:id="@+id/checkoutFragment_deliveryTitle"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="start"
+                        android:text="@string/delivery"
+                        android:textDirection="locale"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/default_text_large_size" />
+
+                    <TextView
+                        android:id="@+id/checkoutFragment_deliveryTv"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="end"
+                        android:textDirection="locale"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/default_text_large_size" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/checkoutFragment_discountLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:visibility="gone"
+                    android:paddingStart="@dimen/default_2x_space"
+                    android:paddingTop="@dimen/default_half_space"
+                    android:paddingEnd="@dimen/default_2x_space"
+                    android:paddingBottom="@dimen/default_half_space"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:id="@+id/checkoutFragment_discountTitle"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="start"
+                        android:text="@string/discount"
+                        android:textDirection="locale"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/default_text_large_size" />
+
+                    <TextView
+                        android:id="@+id/checkoutFragment_discountTv"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="end"
+                        android:textDirection="locale"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/default_text_large_size" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingStart="@dimen/default_2x_space"
+                    android:paddingTop="@dimen/default_half_space"
+                    android:paddingEnd="@dimen/default_2x_space"
+                    android:paddingBottom="@dimen/default_half_space"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:id="@+id/checkoutFragment_totalAmountTitle"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="start"
+                        android:text="@string/totalAmount"
+                        android:textDirection="locale"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/default_text_large_size"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/checkoutFragment_totalAmountTv"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="end"
+                        android:textDirection="locale"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/default_text_large_size"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingStart="@dimen/default_2x_space"
+                    android:paddingTop="@dimen/default_half_space"
+                    android:paddingEnd="@dimen/default_2x_space"
+                    android:paddingBottom="@dimen/default_half_space"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:id="@+id/checkoutFragment_deliveryTimeTitle"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="start"
+                        android:text="@string/deliveryTime"
+                        android:textDirection="locale"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="@dimen/default_text_large_size"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/checkoutFragment_deliveryTimeTv"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="end"
+                        android:textDirection="locale"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="@dimen/default_text_large_size"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/checkoutFragment_placeOrderBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/default_2x_space"
+                    android:background="@drawable/bg_button_green"
+                    android:text="@string/placeOrder"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/default_text_xlarge_size"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+        </android.support.v4.widget.NestedScrollView>
+    </LinearLayout>
+</FrameLayout>

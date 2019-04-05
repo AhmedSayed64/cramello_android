@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/default_2x_space"
+    android:paddingTop="@dimen/default_2x_space">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        app:srcCompat="@drawable/ic_sad" />
+
+    <TextView
+        android:id="@+id/no_internet_dialog_msg_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingEnd="@dimen/default_2x_space"
+        android:paddingStart="@dimen/default_2x_space"
+        android:text="@string/connection_error_msg"
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/default_text_large_size" />
+
+    <Button
+        android:id="@+id/no_internet_dialog_retryBtn"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:theme="@style/DcDialogRetryButtonTheme"
+        android:text="@string/connection_error_tryAgain"
+        android:textColor="@color/colorGreen"
+        android:textSize="@dimen/default_text_large_size" />
+
+</LinearLayout>

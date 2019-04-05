@@ -1,0 +1,271 @@
+<resources>
+    <string name="app_name">Cramello</string>
+    <string name="arabic">العربية</string>
+    <string name="english">English</string>
+    <string name="google_maps_Api_Key">AIzaSyBA3J7Wbko8T-6JCK9d0rYxfmdWOEMsyMY</string>
+
+    <string name="home">Home</string>
+    <string name="menu">Menu</string>
+    <string name="myOrders">My Orders</string>
+    <string name="offers">Offers</string>
+    <string name="myAddress">My Addresses</string>
+    <string name="myProfile">My Profile</string>
+    <string name="contactUs">Contact Us</string>
+    <string name="notifications">Notifications</string>
+    <string name="shareApp">Share App</string>
+    <string name="signOut">Sign out</string>
+
+    <string name="chooseDeliveryAddress">Choose Delivery Address</string>
+
+    <string name="login">Login</string>
+    <string name="alreadyHaveAcc">Already have an account</string>
+    <string name="mobileOrEmailHint">Mobile or Email</string>
+    <string name="passwordHint">Password</string>
+    <string name="continueTitle">Continue</string>
+    <string name="forgetPw">Forget Password?</string>
+    <string name="createAccount">Create New Account</string>
+    <string name="kwPhoneCode">+965</string>
+    <string name="mobileOrEmailValid">Please enter your phone or your email</string>
+    <string name="pwValid">Please enter valid password</string>
+
+    <string name="mobileNo">Mobile number</string>
+    <string name="email">E-mail</string>
+    <string name="confirmPw">Confirm password</string>
+    <string name="firstName">First name</string>
+    <string name="familyName">Family name</string>
+
+    <string name="firstNameValid">Please enter your first name</string>
+    <string name="familyNameValid">Please enter your family name</string>
+    <string name="mobileNoValid">Please enter valid phone number</string>
+    <string name="emailValid">Please enter valid email</string>
+    <string name="pw_notMatchValid">Password didn"'"t match with confirm password</string>
+
+    <string name="registerHint">Cramello will send you SMS message to verify your phone number</string>
+    <string name="phone_duplicated">Phone already registered</string>
+    <string name="email_duplicated">Email already registered</string>
+
+    <string name="chars">characters</string>
+    <string name="number">Numbers</string>
+    <string name="atLeast">at least</string>
+
+    <string name="ver_title">Enter Code Here</string>
+    <string name="ver_msg"> Check your SMS and put the code you received below </string>
+    <string name="ver_hint"> Enter 4 digits code </string>
+    <string name="didNotReceiveCode"> I didn"'"t receive code</string>
+    <string name="resendSmsWithLine"> <u>Resend SMS</u> </string>
+    <string name="callMeWithLine"> <u>Call Me</u> </string>
+
+    <string name="verCodeValidation">Please enter the code that sent to your phone number</string>
+    <string name="callsentSuccess">You will receive a call now</string>
+    <string name="smsSentSuccess">You will receive sms now</string>
+    <string name="callsentFailed">Failed to call you</string>
+    <string name="smsSentFailed">Failed reaching server to sent sms</string>
+    <string name="codeNotCorrect">Wrong code</string>
+    <string name="failedSendCode">Failed to send code</string>
+
+    <string name="registerSuccess">Register has been completed successfully</string>
+    <string name="resetPwSuccess">Reset password link has been sent to your email</string>
+    <string name="emailNotRegistered">This email is not registered</string>
+
+    <string name="resetPwFailed">Failed to send email to server, please try again in a moment</string>
+    <string name="server_register_failed">Register failed, please try again in a moment</string>
+    <string name="login_wrong_data">Phone/Email or password not correct</string>
+    <string name="server_login_failed">Login failed, please try again in a moment</string>
+
+    <string name="delete"> <u>Delete</u> </string>
+    <string name="edit"> <u>Edit</u> </string>
+
+    <string name="apartment">Apartment</string>
+    <string name="house">Home</string>
+    <string name="office">Office</string>
+
+    <string name="addressType">Address Type</string>
+    <string name="area">Area</string>
+    <string name="block">Block</string>
+    <string name="street">Street</string>
+    <string name="avenue">Avenue(Optional)</string>
+    <string name="floor">Floor</string>
+    <string name="building">Building</string>
+    <string name="extraDelivery">Extra Delivery Information</string>
+    <string name="officeNumber">Office No.</string>
+    <string name="homeNumber">Home No.</string>
+    <string name="apartmentNumber">Apartment No.</string>
+
+    <string name="addAddress">Add New Address</string>
+    <string name="deliveryAddress">Delivery Address</string>
+    <string name="saveAddress">Save Address</string>
+
+    <string name="addressTypeValid">Please select address type</string>
+    <string name="areaValid">Please select the area</string>
+    <string name="blockValid">Block is required field</string>
+    <string name="streetValid">Street is required field</string>
+    <string name="floorValid">Floor is required field</string>
+    <string name="buildingValid">Building is required field</string>
+    <string name="officeNumberValid">Office No. is required field</string>
+    <string name="homeNumberValid">Home No. is required field</string>
+    <string name="apartmentNumberValid">Apartment No. is required field</string>
+
+    <string name="addressCreatedSuccess">Address created successfully</string>
+    <string name="addressUpdatedSuccess">Address updated successfully</string>
+    <string name="addressDeletedSuccess">Address deleted successfully</string>
+
+    <string name="addressCreatedFailed">Failed To create the address</string>
+    <string name="addressUpdatedFailed">Failed To update the address</string>
+    <string name="addressDeletedFailed">Failed To delete the address</string>
+
+    <string name="selectAddress">Select Address</string>
+    <string name="add">Add</string>
+    <string name="addressEmptyMsg"> It seems you don"'"t have address click on \n add button \n to add new address</string>
+    <string name="addressRequestFailed">Failed to get your addresses</string>
+
+    <string name="mapHint">Autofill address based on your current location or move the map to your exact location</string>
+    <string name="confirmAddress">Confirm Address</string>
+
+    <string name="selectArea">Select Area</string>
+
+    <string name="deleteConfirm">Delete Confirmation</string>
+    <string name="deleteAddressMsg">Are you surly want to delete this address?</string>
+
+    <string name="confirmLocationTitle">Confirm Location</string>
+    <string name="confirmLocationMsg">Please Ensure your address is accurate and complete</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
+
+    <string name="minOrder">Min Order:</string>
+    <string name="kd">KD</string>
+    <string name="minOrderValid">Order must be at least</string>
+    <string name="itemAddedSuccess">has been added to your cart</string>
+    <string name="viewCart">View cart</string>
+    <string name="total">Total</string>
+
+    <string name="productDetail">Product detail</string>
+    <string name="specialRequest">Special Request</string>
+    <string name="optional">(optional)</string>
+    <string name="typeHere">Type here…</string>
+    <string name="qty">Qty:</string>
+    <string name="addToCart">Add to Cart</string>
+
+    <string name="share_txt">Let me recommend you this application</string>
+    <string name="share_title">choose one</string>
+
+    <string name="cart">Cart</string>
+    <string name="cartEmpty">Your cart empty</string>
+    <string name="addItems">Add Items</string>
+    <string name="addMore">Add more</string>
+    <string name="subTotal">Subtotal</string>
+    <string name="checkOut">Checkout</string>
+
+    <string name="failedToGetData">Failed to get data from server</string>
+    <string name="clearCartTitle">Empty the shopping cart</string>
+    <string name="clearCartMsg">Your cart contains items from</string>
+    <string name="store">Store</string>
+    <string name="clearCartMsg2">Do you wish to clear your cart and start a new order here?</string>
+    <string name="newOrder">New order</string>
+    <string name="notAvailable">Not Available</string>
+
+    <string name="items">Items</string>
+    <string name="discountVoucher">Discount Voucher</string>
+    <string name="payWith">Pay with</string>
+    <string name="voucherCode">Voucher code</string>
+    <string name="redeem">Redeem</string>
+    <string name="cash">Cash</string>
+    <string name="knet">Knet</string>
+    <string name="visaMaster">Visa/Master</string>
+    <string name="delivery">Delivery</string>
+    <string name="totalAmount">Total amount</string>
+    <string name="placeOrder">Place order</string>
+    <string name="x">x</string>
+
+    <string name="voucherCodeVaild">Please enter your voucher code</string>
+    <string name="voucherCodeWrong">Voucher code not exist</string>
+    <string name="voucherCodeExpire">Voucher code expired</string>
+    <string name="voucherCodeAddedSuccess">Voucher code added successfully to your order</string>
+    <string name="voucherCodeAddedFailed">Failed to add your voucher code</string>
+    <string name="checkoutFailed">Checkout failed</string>
+    <string name="payment">Payment</string>
+
+    <string name="orderDetail">Order Detail</string>
+    <string name="congratulation">Congratulation</string>
+    <string name="orderOnTheWay">Your items already on way</string>
+    <string name="orderId">Order Id:</string>
+    <string name="pleaseWait">Please wait a moment…</string>
+    <string name="save">Save</string>
+    <string name="changePassword">Change password</string>
+
+    <string name="getProfileFailed">Failed to get profile data</string>
+    <string name="profileUpdatedSuccess">Profile updated successfully</string>
+    <string name="profileUpdatedFailed">Failed to update your profile</string>
+
+    <string name="currentPassword">Current password</string>
+    <string name="newPassword">New password</string>
+    <string name="confirmNewPassword">Confirm new password</string>
+
+    <string name="changePasswordSuccess">Password changed successfully</string>
+    <string name="changePasswordFailed">Failed to change your password</string>
+
+    <string name="currentPasswordIncorrect">Current password not correct</string>
+    <string name="reorder">Reorder</string>
+    <string name="pending">Pending</string>
+    <string name="delivered">Delivered</string>
+    <string name="canceled">Canceled</string>
+    <string name="getOrdersFailed">Failed to reach your orders</string>
+    <string name="emptyOrders">Empty orders</string>
+    <string name="reorderFailed">Failed to reorder</string>
+    <string name="reorderAddedToCart">Order items added to your cart</string>
+
+    <string name="contact_hint">We like to help you any time</string>
+    <string name="contact_emailHint">You Can email us on</string>
+    <string name="contact_phoneHint">Or call us on</string>
+    <string name="branches">Branches</string>
+
+    <string name="failedToGetContactData">Failed to get contact data</string>
+    <string name="failedToGetBranches">Failed to get branches data</string>
+
+    <string name="branch">Branch</string>
+    <string name="phone">Phone</string>
+    <string name="location">Location</string>
+
+    <string name="getBranchesFailed">Failed to get branches</string>
+
+    <string name="shareOffer"> <u>Share offer</u> </string>
+    <string name="noOfferYet">No offers yet</string>
+
+    <string name="noNotificationsYet">No notifications yet</string>
+    <string name="getNotificationsFailed">Failed to get notifications</string>
+
+    <string name="searchForArea">Search for area</string>
+    <string name="selectAddressFirst">Please select your address first</string>
+    <string name="and">and</string>
+    <string name="misMatchCartTitle">MisMatch with branch menu</string>
+    <string name="misMatchCartMsg1">not available in</string>
+    <string name="misMatchCartMsg2">Upon completion, they will be deleted</string>
+
+    <string name="paymentMethod">Payment method</string>
+    <string name="refunded">Refunded</string>
+    <string name="paid">Paid</string>
+
+    <string name="failedToPay">Failed to make a payment</string>
+
+    <string name="discount">Discount</string>
+
+    <string name="neew">New</string>
+    <string name="processing">Processing</string>
+    <string name="completed">Completed</string>
+
+    <string name="deliveryTime">Delivery Time</string>
+
+    <string name="permission_denied_msg">If you reject permission,you can not use this service\n\nPlease turn on permissions at [Setting] > [Permission]</string>
+    <string name="allow">Allow</string>
+
+    <string name="gps_settings">GPS</string>
+    <string name="gps_message">GPS is not enabled. Do you want to go to settings menu ?</string>
+    <string name="gps_settings_yes">Gps Setting</string>
+    <string name="gps_settings_no">Cancel</string>
+    <string name="gps_result_zero">Please wait a moment until the GPS can read your location</string>
+
+    <string name="connection_offline">Please check your internet connection and try again</string>
+    <string name="connection_error_msg">No internet connection make sure wifi or cellular data is turned on then try again</string>
+    <string name="connection_error_tryAgain">Retry</string>
+    <string name="connection_error_back">Back</string>
+    <string name="connection_error_ok">Ok</string>
+</resources>

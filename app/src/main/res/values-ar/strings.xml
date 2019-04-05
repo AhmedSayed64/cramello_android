@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">كراميللو</string>
+    <string name="arabic">العربية</string>
+    <string name="english">English</string>
+    <string name="google_maps_Api_Key">AIzaSyBA3J7Wbko8T-6JCK9d0rYxfmdWOEMsyMY</string>
+
+    <string name="home">الرئيسية</string>
+    <string name="menu">قائمة الطعام</string>
+    <string name="myOrders">طلباتي</string>
+    <string name="offers">العروض</string>
+    <string name="myAddress">قائمة العناوين</string>
+    <string name="myProfile">بياناتي</string>
+    <string name="contactUs">اتصل بنا</string>
+    <string name="notifications">الإشعارات</string>
+    <string name="shareApp">انشر التطبيق</string>
+    <string name="signOut">تسجيل الخروج</string>
+
+    <string name="chooseDeliveryAddress">اختر عنوان التوصيل</string>
+
+    <string name="login">تسجيل الدخول</string>
+    <string name="alreadyHaveAcc">تملك حساب بالفعل</string>
+    <string name="mobileOrEmailHint">رقم الهاتف او البريد الإلكتروني</string>
+    <string name="passwordHint">كلمه المرور</string>
+    <string name="continueTitle">استمرار</string>
+    <string name="forgetPw">نسيت كلمه المرور؟</string>
+    <string name="createAccount">تسجيل حساب جديد</string>
+    <string name="kwPhoneCode">+965</string>
+
+    <string name="mobileOrEmailValid">من فضلك ادخل رقم الهاتف او البريد الإلكتروني</string>
+    <string name="pwValid">من فضلك أدخل كلمه المرور</string>
+
+    <string name="mobileNo">رقم الهاتف</string>
+    <string name="email">البريد الإلكتروني</string>
+    <string name="confirmPw">تأكيد كلمة المرور</string>
+    <string name="firstName">الأسم الأول</string>
+    <string name="familyName">أسم العائله</string>
+
+    <string name="firstNameValid">من فضلك ادخل الاسم الاول</string>
+    <string name="familyNameValid">من فضلك ادخل اسم العائله</string>
+    <string name="mobileNoValid">من فضلك أدخل رقم هاتف صحيح</string>
+    <string name="emailValid">من فضلك أدخل بريد إلكتروني صحيح</string>
+    <string name="pw_notMatchValid">كلمه المرور لا تتوافق مع تأكيد كلمه المرور</string>
+
+    <string name="registerHint">كراميللو سوف يرسل لك رسالة قصيرة للتحقق من رقم هاتفك</string>
+    <string name="phone_duplicated">رقم الهاتف مسجل بالفعل</string>
+    <string name="email_duplicated">البريد الإلكتروني مسجل بالفعل</string>
+
+    <string name="chars">حروف</string>
+    <string name="number">رقم</string>
+    <string name="atLeast">علي الاقل</string>
+
+    <string name="ver_title">ادخل الكود</string>
+    <string name="ver_msg">تحقق من الرسائل القصيرة الخاصة بك ووضع الرمز الذي تلقيته أدناه</string>
+    <string name="ver_hint">ادخل الرمز المكون من ٤ خانات</string>
+    <string name="didNotReceiveCode"> لم تستقبل اى رسائل</string>
+    <string name="resendSmsWithLine"> <u>ارسل الرسالة القصيرة مرة اخرى</u> </string>
+    <string name="callMeWithLine"> <u>الاتصال مرة اخرى</u> </string>
+
+    <string name="verCodeValidation">من فضلك ادخل الكود المرسل الي هاتفك</string>
+    <string name="callsentSuccess">سوف تتلقي مكالمه هاتفيه الان</string>
+    <string name="smsSentSuccess">سوف يصل الي هاتفك الكود المطلوب</string>
+    <string name="callsentFailed">فشل الاتصال بك</string>
+    <string name="smsSentFailed">فشل ارسال الكود</string>
+    <string name="codeNotCorrect">الكود الذي ادخلته خاطئ</string>
+    <string name="failedSendCode">فشل في إرسال الكود</string>
+
+    <string name="registerSuccess">تم التسجيل بنجاح</string>
+    <string name="resetPwSuccess">Reset password link has been sent to your email</string>
+    <string name="emailNotRegistered">هذا البريد الإلكتروني غير مسجل</string>
+
+    <string name="resetPwFailed">فشل في ارسال الايميل ,, من فضل حاول مره اخري</string>
+    <string name="server_register_failed">فشل تسجيل الحساب ,, من فضل حاول مره اخري</string>
+    <string name="login_wrong_data">رقم الهاتف/البريد الإلكتروني غير صحيح او كلمه المرور غير صحيحه</string>
+    <string name="server_login_failed">تعذر تسجيل الدخول , من فضلك حاول مره اخري</string>
+
+    <string name="delete"> <u>حذف</u> </string>
+    <string name="edit"> <u>تعديل</u> </string>
+
+    <string name="apartment">شقة</string>
+    <string name="house">منزل</string>
+    <string name="office">مكتب</string>
+
+    <string name="addressType">نوع العنوان</string>
+    <string name="area">المنطقة</string>
+    <string name="block">قطعة</string>
+    <string name="street">شارع</string>
+    <string name="avenue">جادة(إختياري)</string>
+    <string name="floor">طابق</string>
+    <string name="building">المبنى</string>
+    <string name="extraDelivery">ارشادات اضافية (إختياري)</string>
+    <string name="apartmentNumber">رقم الشقة</string>
+    <string name="officeNumber">رقم المكتب</string>
+    <string name="homeNumber">رقم المنزل</string>
+
+    <string name="addAddress">إضافه عنوان جديد</string>
+    <string name="deliveryAddress">عنوان التوصيل</string>
+    <string name="saveAddress">حفظ العنوان</string>
+
+    <string name="addressTypeValid">من فضلك اختر نوع العنوان</string>
+    <string name="areaValid">من فضلك اختر المنطقة</string>
+    <string name="blockValid">من فضلك ادخل رقم القطعة</string>
+    <string name="streetValid">من فضلك ادخل الشارع</string>
+    <string name="floorValid">من فضلك ادخل رقم الدور</string>
+    <string name="buildingValid">من فضلك ادخل اسم او رقم المبنى</string>
+    <string name="officeNumberValid">من فضلك ادخل رقم المكتب</string>
+    <string name="homeNumberValid">من فضلك ادخل رقم المنزل</string>
+    <string name="apartmentNumberValid">من فضلك ادخل رقم الشقه</string>
+
+    <string name="addressCreatedSuccess">تم اضافه عنوان جديد بنجاح</string>
+    <string name="addressUpdatedSuccess">تم تعديل العنوان بنجاح</string>
+    <string name="addressDeletedSuccess">تم حذف العنوان بنجاح</string>
+
+    <string name="addressCreatedFailed">فشل في اضافه العنوان</string>
+    <string name="addressUpdatedFailed">فشل في تعديل العنوان</string>
+    <string name="addressDeletedFailed">فشل في حذف العنوان</string>
+
+    <string name="selectAddress">اختر العنوان</string>
+    <string name="add">اضف</string>
+    <string name="addressEmptyMsg">يبدو انه لا يوجد لديك عناوين اضغط علي \n زر الاضافه \n لأضافه عنوان جديد</string>
+    <string name="addressRequestFailed">فشل في الوصول الي عناوينك</string>
+
+    <string name="mapHint">العنوان يمتلئ تلقائيا استنادًا إلى موقعك الحالي أو حرك الخريطه الي موقعك الحالي</string>
+    <string name="confirmAddress">تأكيد العنوان</string>
+
+    <string name="selectArea">اختر المنطقة</string>
+
+    <string name="deleteConfirm">تأكيد الحذف</string>
+    <string name="deleteAddressMsg">هل انت متأكد من حذف هذا العنوان؟</string>
+
+    <string name="confirmLocationTitle">تأكيد العنوان</string>
+    <string name="confirmLocationMsg">من فضلك تأكد من ان العنوان صحيح</string>
+    <string name="ok">تم</string>
+    <string name="cancel">إلغاء</string>
+
+    <string name="minOrder">الحد الأدنى للطلب:</string>
+    <string name="kd">د.ك</string>
+    <string name="minOrderValid">لا يمكن ان يقل تكلفه الطلب عن</string>
+    <string name="itemAddedSuccess">تمت إضافته الي سله الطلبات</string>
+    <string name="viewCart">عرض السلة</string>
+    <string name="total">المجموع</string>
+
+    <string name="productDetail">تفاصيل الصنف</string>
+    <string name="specialRequest">طلب خاص</string>
+    <string name="optional">(إختياري)</string>
+    <string name="typeHere">اكتب هنا…</string>
+    <string name="qty">الكمية:</string>
+    <string name="addToCart">اضف الى السلة</string>
+
+    <string name="share_txt">دعوة اصدقائك الى هذا التطبيق</string>
+    <string name="share_title">اختر واحدا</string>
+
+    <string name="cart">سلة المشتريات</string>
+    <string name="cartEmpty">سلة مشترياتك فارغه</string>
+    <string name="addItems">أضف أصناف</string>
+    <string name="addMore">أضف المزيد</string>
+    <string name="subTotal">المجموع</string>
+    <string name="checkOut">تنفيذ الطلب</string>
+
+    <string name="failedToGetData">فشل في الوصول الي البيانات </string>
+    <string name="clearCartTitle">إفراغ سلة المشتريات</string>
+    <string name="clearCartMsg">تحتوي سلة مشترياتك علي اصناف من </string>
+    <string name="store">متجر</string>
+    <string name="clearCartMsg2">هل تريد إفراغ السلة و البدء من جديد</string>
+    <string name="newOrder">طلب جديد</string>
+    <string name="notAvailable">غير متوفر</string>
+
+    <string name="items">الأصناف</string>
+    <string name="discountVoucher">قسيمة خصم</string>
+    <string name="payWith">ادفع بـ</string>
+    <string name="voucherCode">كود القسيمة</string>
+    <string name="redeem">تفعيل الكود</string>
+    <string name="cash">كاش</string>
+    <string name="knet">كي نت</string>
+    <string name="visaMaster">فيزا/ماستر</string>
+    <string name="delivery">التوصيل</string>
+    <string name="totalAmount">الأجمالي</string>
+    <string name="placeOrder">تنفيذ الطلب</string>
+    <string name="x">x</string>
+
+    <string name="orderDetail">تفاصيل الطلب</string>
+    <string name="congratulation">تهانينا</string>
+    <string name="orderOnTheWay">طلبك في الطريق</string>
+    <string name="orderId">رقم الطلب:</string>
+    <string name="pleaseWait">من فضلك انتظر لحظات…</string>
+
+    <string name="voucherCodeVaild">من فضلك ادخل كود القسيمه</string>
+    <string name="voucherCodeWrong">كود القسيمه خاطئ وغير موجود</string>
+    <string name="voucherCodeExpire">كود القسيمه منتهي الصلاحيه</string>
+    <string name="voucherCodeAddedSuccess">تم إضافه كود القسيمة إالي الطلب</string>
+    <string name="voucherCodeAddedFailed">فشل إضافه كود القسيمة الي طلبك</string>
+    <string name="checkoutFailed">فشل في تنفيذ الطلب</string>
+    <string name="payment">الدفع</string>
+    <string name="save">حفظ</string>
+    <string name="changePassword">تغيير كلمة المرور</string>
+
+    <string name="getProfileFailed">فشل في الوصول الي بيانات الحساب</string>
+    <string name="profileUpdatedSuccess">تم تعديل الحساب بنجاح</string>
+    <string name="profileUpdatedFailed">فشل في تعديل الحساب</string>
+
+    <string name="currentPassword">كلمه المرور الحاليه</string>
+    <string name="newPassword">كلمه المرور الجديدة</string>
+    <string name="confirmNewPassword">تأكيد كلمه المرور الجديدة</string>
+
+    <string name="changePasswordSuccess">تم تغيير كلمه المرور بنجاح</string>
+    <string name="changePasswordFailed">فشل في تغيير كلمه المرور</string>
+
+    <string name="currentPasswordIncorrect">كلمه المرور الحاليه غير صحيحة</string>
+    <string name="reorder">إعاده الطلب</string>
+    <string name="pending">قيد الأنتظار</string>
+    <string name="delivered">تم التوصيل</string>
+    <string name="canceled">إلغيت</string>
+    <string name="getOrdersFailed">فشل في الوصول الي الطلبات السابقه</string>
+    <string name="emptyOrders">لا يوجد طلبات سابقة</string>
+    <string name="reorderFailed">فشل في إعاده الطلب</string>
+    <string name="reorderAddedToCart">تمت اضافه اصناف الطلب الي سلة المشتريات</string>
+
+    <string name="contact_hint">نود أن نساعدك في أي وقت</string>
+    <string name="contact_emailHint">تستطيع ارسال بريد الكتروني الينا على</string>
+    <string name="contact_phoneHint">او الأتصال بنا على</string>
+    <string name="branches">الفروع</string>
+
+    <string name="failedToGetContactData">فشل في الوصول الي بيانات التواصل</string>
+    <string name="failedToGetBranches">فشل في الوصول الي بيانات الفروع</string>
+
+    <string name="branch">الفرع</string>
+    <string name="phone">الهاتف</string>
+    <string name="location">الخريطة</string>
+
+    <string name="getBranchesFailed">فشل في الوصول الي بيانات الفروع</string>
+
+    <string name="shareOffer"> <u>شارك العرض</u> </string>
+    <string name="noOfferYet">لا يوجد عروض</string>
+
+    <string name="noNotificationsYet">لا يوجد إشعارات </string>
+    <string name="getNotificationsFailed">فشل في الوصول الي الإشعارات</string>
+
+    <string name="searchForArea">إبحث عن المنطقة</string>
+    <string name="selectAddressFirst">من فضلك اختر العنوان اولا</string>
+    <string name="and">و</string>
+    <string name="misMatchCartTitle">عدم تطابق مع قائمة الفرع</string>
+    <string name="misMatchCartMsg1">غير متوفرة في</string>
+    <string name="misMatchCartMsg2">عند الاستكمال سيتم حذفهم</string>
+
+    <string name="paymentMethod">طريقة الدفع</string>
+    <string name="refunded">رد المال</string>
+    <string name="paid">مدفوع</string>
+
+    <string name="failedToPay">فشل في عملية الدفع</string>
+
+    <string name="discount">خصم</string>
+
+    <string name="neew">جديد</string>
+    <string name="processing">قيد المعالجة</string>
+    <string name="completed">مكتمل</string>
+
+    <string name="deliveryTime">وقت التوصيل</string>
+
+    <string name="permission_denied_msg">إذا رفضت الإذن ، فلا يمكنك استخدام هذه الخدمة,الرجاء تشغيل الأذونات في "الإعدادات" ثم "الاّذونات"</string>
+    <string name="allow">السماح</string>
+
+    <string name="gps_settings">تحديد المواقع</string>
+    <string name="gps_message">تحديد المواقع مغلق , هل تريد الذهاب لقائمه اعدادات تحديد المواقع ؟</string>
+    <string name="gps_settings_yes">الاعدادات</string>
+    <string name="gps_settings_no">لا</string>
+    <string name="gps_result_zero">من فضلك انتظر لحظات حتي يتمكن جهاز تحديد المواقع من تحديد موقعك</string>
+
+    <string name="connection_offline">من فضلك تأكد من إتصالك بالإنترنت</string>
+    <string name="connection_error_msg">لا يوجد إنترنت تأكد من تشغيل شبكة WiFi أو بيانات الهاتف الخلوي ثم حاول مرة أخرى</string>
+    <string name="connection_error_tryAgain">حاول</string>
+    <string name="connection_error_back">رجوع</string>
+    <string name="connection_error_ok">تم</string>
+
+</resources>

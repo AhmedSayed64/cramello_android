@@ -1,0 +1,31 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:windowFullscreen">false</item>
+    </style>
+
+    <style name="DcDialogRetryButtonTheme" parent="Theme.AppCompat.Light">
+        <item name="colorControlHighlight">@color/colorGreen</item>
+    </style>
+
+    <style name="AlertDialogCustom" parent="@android:style/Theme.Dialog">
+        <item name="android:windowBackground">@color/colorBlackTransparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="colorAccent">@color/colorGreen</item>
+        <item name="android:textColorPrimary">@color/colorGreen</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:textAppearance">@android:style/TextAppearance.Large</item>
+    </style>
+
+    <style name="TransDialog" parent="android:Theme.Dialog">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+
+</resources>

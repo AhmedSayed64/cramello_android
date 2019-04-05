@@ -1,0 +1,36 @@
+<resources>
+
+    <dimen name="default_half_space">2.5dp</dimen>
+    <dimen name="default_1x_space">5dp</dimen>
+    <dimen name="default_1.5x_space">7.5dp</dimen>
+    <dimen name="default_2x_space">10dp</dimen>
+    <dimen name="default_3x_space">15dp</dimen>
+    <dimen name="default_4x_space">20dp</dimen>
+    <dimen name="default_5x_space">25dp</dimen>
+    <dimen name="default_6x_space">30dp</dimen>
+    <dimen name="default_10x_space">50dp</dimen>
+    <dimen name="default_15x_space">75dp</dimen>
+    <dimen name="default_17x_space">85dp</dimen>
+    <dimen name="default_20x_space">100dp</dimen>
+
+    <dimen name="default_text_xxsmall_size">8sp</dimen>
+    <dimen name="default_text_xsmall_size">10sp</dimen>
+    <dimen name="default_text_small_size">13sp</dimen>
+    <dimen name="default_text_normal_size">15sp</dimen>
+    <dimen name="default_text_xnormal_size">16.5sp</dimen>
+    <dimen name="default_text_large_size">18sp</dimen>
+    <dimen name="default_text_xlarge_size">20sp</dimen>
+    <dimen name="default_text_xxlarge_size">22sp</dimen>
+    <dimen name="default_text_xxxlarge_size">25sp</dimen>
+
+    <dimen name="default_line_normal_size">0.5dp</dimen>
+    <dimen name="default_line_large_size">1dp</dimen>
+    <dimen name="default_line_xlarge_size">2dp</dimen>
+    <dimen name="default_line_xxlarge_size">4dp</dimen>
+
+    <dimen name="default_rv_padding_bottom">70dp</dimen>
+    <dimen name="sideMenu_ad_height">180dp</dimen>
+    <dimen name="map_height">150dp</dimen>
+
+    <dimen name="screen_header">60dp</dimen>
+</resources>

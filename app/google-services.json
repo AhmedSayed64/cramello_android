@@ -1,0 +1,62 @@
+{
+  "project_info": {
+    "project_number": "860438749260",
+    "firebase_url": "https://newcramello.firebaseio.com",
+    "project_id": "newcramello",
+    "storage_bucket": "newcramello.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:860438749260:android:1980f78083edb0dc",
+        "android_client_info": {
+          "package_name": "net.aldar.cramello"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "860438749260-fit283mjra42itirre44bo10i6c5av6f.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "net.aldar.cramello",
+            "certificate_hash": "9e1b4387412160e6105373b3ea89a4af0623c1e0"
+          }
+        },
+        {
+          "client_id": "860438749260-5mosjtldbcddshg7bg5amnkmqq5hv23o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAR0rdK5ywreqymyFntEUqWn0q-WfvWm5o"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "860438749260-5mosjtldbcddshg7bg5amnkmqq5hv23o.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "860438749260-jii2mjejhfge0lg2gtiv39tbhukd4p42.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.cramello.Cramello"
+              }
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

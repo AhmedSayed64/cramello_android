@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="top"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/ver_activity_title"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/screen_header"
+            android:background="@drawable/gradient_toolbar"
+            android:gravity="center"
+            android:padding="@dimen/default_2x_space"
+            android:text="@string/ver_title"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/default_text_xxlarge_size"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="@dimen/default_2x_space">
+
+            <LinearLayout
+                android:id="@+id/ver_content_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/ver_activity_msgTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/default_1x_space"
+                    android:gravity="start"
+                    android:padding="@dimen/default_2x_space"
+                    android:text="@string/ver_msg"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/default_text_xnormal_size" />
+
+                <LinearLayout
+                    android:id="@+id/ver_activity_digits_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/default_5x_space"
+                    android:paddingRight="@dimen/default_5x_space"
+                    android:weightSum="3">
+
+                    <EditText
+                        android:id="@+id/ver_activity_firstNoInput"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/default_1x_space"
+                        android:gravity="center"
+                        android:inputType="numberDecimal"
+                        android:maxLength="1"
+                        android:maxLines="1"
+                        android:ems="2"
+                        android:singleLine="true"
+                        android:textColor="@color/colorGreen"
+                        android:textSize="@dimen/default_text_xnormal_size" />
+
+                    <EditText
+                        android:id="@+id/ver_activity_secNoInput"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/default_1x_space"
+                        android:gravity="center"
+                        android:inputType="numberDecimal"
+                        android:maxLength="1"
+                        android:maxLines="1"
+                        android:ems="2"
+                        android:singleLine="true"
+                        android:textColor="@color/colorGreen"
+                        android:textSize="@dimen/default_text_xnormal_size" />
+
+                    <EditText
+                        android:id="@+id/ver_activity_thirdNoInput"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/default_1x_space"
+                        android:gravity="center"
+                        android:inputType="numberDecimal"
+                        android:maxLength="1"
+                        android:maxLines="1"
+                        android:ems="2"
+                        android:singleLine="true"
+                        android:textColor="@color/colorGreen"
+                        android:textSize="@dimen/default_text_xnormal_size" />
+
+                    <EditText
+                        android:id="@+id/ver_activity_fourthNoInput"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/default_1x_space"
+                        android:gravity="center"
+                        android:inputType="numberDecimal"
+                        android:maxLength="1"
+                        android:maxLines="1"
+                        android:ems="2"
+                        android:singleLine="true"
+                        android:textColor="@color/colorGreen"
+                        android:textSize="@dimen/default_text_xnormal_size" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/ver_activity_hintTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_margin="@dimen/default_2x_space"
+                    android:layout_weight="2"
+                    android:gravity="center"
+                    android:text="@string/ver_hint"
+                    android:textColor="@color/colorDimGray"
+                    android:textSize="@dimen/default_text_xnormal_size" />
+
+                <Button
+                    android:id="@+id/ver_activity_continueBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/default_1x_space"
+                    android:background="@drawable/bg_button_green"
+                    android:text="@string/continueTitle"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/default_text_xlarge_size"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/default_2x_space"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:id="@+id/ver_activity_didNotTitle"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.5"
+                        android:gravity="start"
+                        android:padding="@dimen/default_2x_space"
+                        android:textDirection="locale"
+                        android:text="@string/didNotReceiveCode"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/default_text_large_size"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/ver_activity_counterTv"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.4"
+                        android:gravity="center"
+                        android:padding="@dimen/default_2x_space"
+                        android:textDirection="locale"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/default_text_large_size"
+                        android:textStyle="bold" />
+
+
+                </LinearLayout>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/default_line_large_size"
+                    android:background="@color/colorNobel" />
+
+                <LinearLayout
+                    android:id="@+id/ver_activity_reSmsLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/default_2x_space">
+
+                    <ImageView
+                        android:id="@+id/ver_activity_reSmsIv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@drawable/sms_icon" />
+
+                    <TextView
+                        android:id="@+id/ver_activity_reSmsTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/default_1x_space"
+                        android:gravity="start|center"
+                        android:padding="@dimen/default_2x_space"
+                        android:text="@string/resendSmsWithLine"
+                        android:textColor="@color/colorGreen"
+                        android:textSize="@dimen/default_text_xnormal_size"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/default_line_large_size"
+                    android:background="@color/colorNobel" />
+
+                <LinearLayout
+                    android:id="@+id/ver_activity_callLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/default_2x_space">
+
+                    <ImageView
+                        android:id="@+id/ver_activity_callIv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@drawable/call_icon" />
+
+                    <TextView
+                        android:id="@+id/ver_activity_callTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/default_1x_space"
+                        android:gravity="start|center"
+                        android:padding="@dimen/default_2x_space"
+                        android:text="@string/callMeWithLine"
+                        android:textColor="@color/colorMaroon"
+                        android:textSize="@dimen/default_text_xnormal_size"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/default_line_large_size"
+                    android:background="@color/colorNobel" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ver_spinKit_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="false"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <com.github.ybq.android.spinkit.SpinKitView xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/spinKitView"
+            style="@style/SpinKitView.FadingCircle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:clickable="false"
+            app:SpinKit_Color="@color/colorGreen" />
+
+    </LinearLayout>
+</FrameLayout>

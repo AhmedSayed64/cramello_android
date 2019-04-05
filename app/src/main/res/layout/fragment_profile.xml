@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/profileFragment_container_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:clickable="true"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="top"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/screen_header"
+            android:background="@drawable/gradient_toolbar"
+            android:orientation="horizontal"
+            android:weightSum="10">
+
+            <LinearLayout
+                android:id="@+id/profileFragment_menuLayout"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.2"
+                android:gravity="center"
+                android:paddingStart="@dimen/default_half_space"
+                android:paddingEnd="@dimen/default_half_space">
+
+                <ImageView
+                    android:id="@+id/profileFragment_menuIv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/default_1x_space"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/burger_menu" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/profileFragment_title"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="7.6"
+                android:gravity="center"
+                android:padding="@dimen/default_2x_space"
+                android:text="@string/myProfile"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/default_text_xxlarge_size"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.2" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="@dimen/default_4x_space">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:weightSum="10">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/name" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2" />
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4">
+
+                    <android.support.v7.widget.AppCompatEditText
+                        android:id="@+id/profileFragment_firstNameInput"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/firstName"
+                        android:inputType="text"
+                        android:textColor="@color/colorCharcoal"
+                        android:textColorHint="@color/colorSuvaGrey"
+                        android:textDirection="locale"
+                        android:textSize="@dimen/default_text_large_size"
+                        app:backgroundTint="@color/colorCharcoal" />
+
+
+                </android.support.design.widget.TextInputLayout>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5" />
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4">
+
+                    <android.support.v7.widget.AppCompatEditText
+                        android:id="@+id/profileFragment_familyNameInput"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/familyName"
+                        android:inputType="text"
+                        android:textColor="@color/colorCharcoal"
+                        android:textColorHint="@color/colorSuvaGrey"
+                        android:textDirection="locale"
+                        android:textSize="@dimen/default_text_large_size"
+                        app:backgroundTint="@color/colorCharcoal" />
+
+
+                </android.support.design.widget.TextInputLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/default_2x_space"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:weightSum="10">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/email" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2" />
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="8.5">
+
+                    <android.support.v7.widget.AppCompatEditText
+                        android:id="@+id/profileFragment_emailInput"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/email"
+                        android:inputType="textEmailAddress"
+                        android:textColor="@color/colorCharcoal"
+                        android:textColorHint="@color/colorSuvaGrey"
+                        android:textDirection="locale"
+                        android:textSize="@dimen/default_text_large_size"
+                        app:backgroundTint="@color/colorCharcoal" />
+
+
+                </android.support.design.widget.TextInputLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/default_2x_space"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:weightSum="10">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/mobile" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2" />
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="8.5">
+
+                    <android.support.v7.widget.AppCompatEditText
+                        android:id="@+id/profileFragment_mobileInput"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/mobileNo"
+                        android:inputType="number"
+                        android:textColor="@color/colorCharcoal"
+                        android:textColorHint="@color/colorSuvaGrey"
+                        android:textDirection="locale"
+                        android:textSize="@dimen/default_text_large_size"
+                        app:backgroundTint="@color/colorCharcoal" />
+
+
+                </android.support.design.widget.TextInputLayout>
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/profileFragment_saveBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/default_4x_space"
+                android:background="@drawable/bg_button_green"
+                android:text="@string/save"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/default_text_xlarge_size"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/profileFragment_changePwBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/default_2x_space"
+                android:padding="@dimen/default_2x_space"
+                android:textDirection="locale"
+                android:text="@string/changePassword"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/default_text_large_size" />
+
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

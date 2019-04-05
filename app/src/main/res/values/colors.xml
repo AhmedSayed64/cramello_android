@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#000000</color>
+    <color name="colorAccent">#5E8721</color>
+
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorGreen">#5E8721</color>
+    <color name="colorGray">#F0F0F0</color>
+
+    <color name="colorFreeSpeechRed">#B10202</color>
+    <color name="colorDodgerBlue">#0076FF</color>
+    <color name="colorDimGray">#686868</color>
+    <color name="colorMatterhorn">#4D4D4D</color>
+    <color name="colorSuvaGrey">#8C8C8C</color>
+    <color name="colorMaroon">#603422</color>
+    <color name="colorNobel">#999999</color>
+    <color name="colorNightRider">#2C2C2C</color>
+    <color name="colorNero">#1A1A1A</color>
+    <color name="colorWhiteSmoke">#EFEFEF</color>
+    <color name="colorCharcoal">#4A4A4A</color>
+    <color name="colorOrangePeel">#FF9F00</color>
+
+    <color name="colorBlackTransparent">#AA000000</color>
+    <color name="colorGray10Transparent">#AA1a1a1a</color>
+    <color name="colorNobelTransparent">#33999999</color>
+</resources>

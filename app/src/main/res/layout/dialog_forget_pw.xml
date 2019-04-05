@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite"
+        android:orientation="vertical"
+        android:padding="@dimen/default_2x_space">
+
+        <TextView
+            android:id="@+id/dialog_forget__title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="@dimen/default_1x_space"
+            android:text="@string/emailValid"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/default_text_xnormal_size" />
+
+        <EditText
+            android:id="@+id/dialog_forget_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/default_2x_space"
+            android:background="@android:color/transparent"
+            android:hint="@string/email"
+            android:inputType="textEmailAddress"
+            android:paddingTop="@dimen/default_2x_space"
+            android:paddingBottom="@dimen/default_2x_space"
+            android:textColor="@color/colorBlack"
+            android:textColorHint="@color/colorSuvaGrey"
+            android:textDirection="locale"
+            android:textSize="@dimen/default_text_large_size" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/default_line_large_size"
+            android:layout_marginTop="@dimen/default_half_space"
+            android:background="@color/colorNobel" />
+
+        <Button
+            android:id="@+id/dialog_forget_continueBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/default_4x_space"
+            android:layout_marginBottom="@dimen/default_2x_space"
+            android:background="@drawable/bg_button_green"
+            android:text="@string/continueTitle"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/default_text_large_size" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/dialog_forget_spinKit_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:visibility="gone">
+
+        <com.github.ybq.android.spinkit.SpinKitView
+            android:id="@+id/dialog_forget_spinKitView"
+            style="@style/SpinKitView.Large.Circle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/default_5x_space"
+            app:SpinKit_Color="@color/colorGreen" />
+
+    </LinearLayout>
+</FrameLayout>
