@@ -1,4 +1,4 @@
-package net.aldar.cramello;
+package net.aldar.cramello.view;
 
 import android.Manifest;
 import android.annotation.TargetApi;
@@ -9,14 +9,16 @@ import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
-import android.support.annotation.NonNull;
-import android.support.annotation.RequiresApi;
-import android.support.v7.app.AlertDialog;
-import android.support.v7.app.AppCompatActivity;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.RequiresApi;
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+
+import net.aldar.cramello.R;
 import net.aldar.cramello.notification.MyFirebaseMessagingService;
 import net.aldar.cramello.services.LocaleHelper;
 import net.aldar.cramello.services.PrefsManger;
@@ -134,7 +136,7 @@ public class SplashActivity extends AppCompatActivity {
 
     private void goToActivity() {
         if (mPrefsManger.isUserLoggedIn())
-            activity = AdActivity.class;
+            activity = MainActivity.class;
         else
             activity = LoginActivity.class;
 

@@ -39,7 +39,7 @@
                         android:id="@+id/addAddressFragment_backIv"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/back_button" />
+                        app:srcCompat="@drawable/back_button" />
 
                 </LinearLayout>
 
@@ -107,7 +107,7 @@
                     android:layout_margin="@dimen/default_1x_space"
                     android:orientation="vertical">
 
-                    <android.support.v7.widget.AppCompatTextView
+                    <androidx.appcompat.widget.AppCompatTextView
                         android:id="@+id/addAddressFragment_areaTv"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -132,7 +132,7 @@
                     android:layout_margin="@dimen/default_1x_space"
                     android:orientation="vertical">
 
-                    <android.support.v7.widget.AppCompatSpinner
+                    <androidx.appcompat.widget.AppCompatSpinner
                         android:id="@+id/addAddressFragment_addressTypeSpinner"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content" />
@@ -143,12 +143,12 @@
                         android:background="@color/colorSuvaGrey" />
                 </LinearLayout>
 
-                <android.support.design.widget.TextInputLayout
+                <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/addAddressFragment_blockInputLayout"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
 
-                    <android.support.v7.widget.AppCompatEditText
+                    <androidx.appcompat.widget.AppCompatEditText
                         android:id="@+id/addAddressFragment_blockInput"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -160,14 +160,14 @@
                         android:textSize="@dimen/default_text_xnormal_size"
                         app:backgroundTint="@color/colorSuvaGrey" />
 
-                </android.support.design.widget.TextInputLayout>
+                </com.google.android.material.textfield.TextInputLayout>
 
-                <android.support.design.widget.TextInputLayout
+                <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/addAddressFragment_streetInputLayout"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
 
-                    <android.support.v7.widget.AppCompatEditText
+                    <androidx.appcompat.widget.AppCompatEditText
                         android:id="@+id/addAddressFragment_streetInput"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -179,14 +179,14 @@
                         android:textSize="@dimen/default_text_xnormal_size"
                         app:backgroundTint="@color/colorSuvaGrey" />
 
-                </android.support.design.widget.TextInputLayout>
+                </com.google.android.material.textfield.TextInputLayout>
 
-                <android.support.design.widget.TextInputLayout
+                <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/addAddressFragment_avenueInputLayout"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
 
-                    <android.support.v7.widget.AppCompatEditText
+                    <androidx.appcompat.widget.AppCompatEditText
                         android:id="@+id/addAddressFragment_avenueInput"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -199,15 +199,15 @@
                         app:backgroundTint="@color/colorSuvaGrey" />
 
 
-                </android.support.design.widget.TextInputLayout>
+                </com.google.android.material.textfield.TextInputLayout>
 
 
-                <android.support.design.widget.TextInputLayout
+                <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/addAddressFragment_buildingInputLayout"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
 
-                    <android.support.v7.widget.AppCompatEditText
+                    <androidx.appcompat.widget.AppCompatEditText
                         android:id="@+id/addAddressFragment_buildingInput"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -220,14 +220,14 @@
                         app:backgroundTint="@color/colorSuvaGrey" />
 
 
-                </android.support.design.widget.TextInputLayout>
+                </com.google.android.material.textfield.TextInputLayout>
 
-                <android.support.design.widget.TextInputLayout
+                <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/addAddressFragment_floorInputLayout"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
 
-                    <android.support.v7.widget.AppCompatEditText
+                    <androidx.appcompat.widget.AppCompatEditText
                         android:id="@+id/addAddressFragment_floorInput"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -240,14 +240,14 @@
                         app:backgroundTint="@color/colorSuvaGrey" />
 
 
-                </android.support.design.widget.TextInputLayout>
+                </com.google.android.material.textfield.TextInputLayout>
 
-                <android.support.design.widget.TextInputLayout
+                <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/addAddressFragment_apartmentNoInputLayout"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
 
-                    <android.support.v7.widget.AppCompatEditText
+                    <androidx.appcompat.widget.AppCompatEditText
                         android:id="@+id/addAddressFragment_apartmentNoInput"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -260,14 +260,14 @@
                         app:backgroundTint="@color/colorSuvaGrey" />
 
 
-                </android.support.design.widget.TextInputLayout>
+                </com.google.android.material.textfield.TextInputLayout>
 
-                <android.support.design.widget.TextInputLayout
+                <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/addAddressFragment_extraInputLayout"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
 
-                    <android.support.v7.widget.AppCompatEditText
+                    <androidx.appcompat.widget.AppCompatEditText
                         android:id="@+id/addAddressFragment_extraNoInput"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -280,7 +280,7 @@
                         app:backgroundTint="@color/colorSuvaGrey" />
 
 
-                </android.support.design.widget.TextInputLayout>
+                </com.google.android.material.textfield.TextInputLayout>
 
                 <Button
                     android:id="@+id/addAddressFragment_saveBtn"

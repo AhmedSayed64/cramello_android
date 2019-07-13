@@ -37,7 +37,7 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="@dimen/default_1x_space"
                     android:adjustViewBounds="true"
-                    android:src="@drawable/burger_menu" />
+                    app:srcCompat="@drawable/burger_menu" />
             </LinearLayout>
 
             <TextView
@@ -83,7 +83,7 @@
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/name" />
+                        app:srcCompat="@drawable/name" />
 
                 </LinearLayout>
 
@@ -92,12 +92,12 @@
                     android:layout_height="match_parent"
                     android:layout_weight="0.2" />
 
-                <android.support.design.widget.TextInputLayout
+                <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="4">
 
-                    <android.support.v7.widget.AppCompatEditText
+                    <androidx.appcompat.widget.AppCompatEditText
                         android:id="@+id/profileFragment_firstNameInput"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -110,19 +110,19 @@
                         app:backgroundTint="@color/colorCharcoal" />
 
 
-                </android.support.design.widget.TextInputLayout>
+                </com.google.android.material.textfield.TextInputLayout>
 
                 <View
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="0.5" />
 
-                <android.support.design.widget.TextInputLayout
+                <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="4">
 
-                    <android.support.v7.widget.AppCompatEditText
+                    <androidx.appcompat.widget.AppCompatEditText
                         android:id="@+id/profileFragment_familyNameInput"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -135,7 +135,7 @@
                         app:backgroundTint="@color/colorCharcoal" />
 
 
-                </android.support.design.widget.TextInputLayout>
+                </com.google.android.material.textfield.TextInputLayout>
 
             </LinearLayout>
 
@@ -157,7 +157,7 @@
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/email" />
+                        app:srcCompat="@drawable/email" />
 
                 </LinearLayout>
 
@@ -166,12 +166,12 @@
                     android:layout_height="match_parent"
                     android:layout_weight="0.2" />
 
-                <android.support.design.widget.TextInputLayout
+                <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="8.5">
 
-                    <android.support.v7.widget.AppCompatEditText
+                    <androidx.appcompat.widget.AppCompatEditText
                         android:id="@+id/profileFragment_emailInput"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -184,7 +184,7 @@
                         app:backgroundTint="@color/colorCharcoal" />
 
 
-                </android.support.design.widget.TextInputLayout>
+                </com.google.android.material.textfield.TextInputLayout>
 
             </LinearLayout>
 
@@ -206,7 +206,7 @@
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/mobile" />
+                        app:srcCompat="@drawable/mobile" />
 
                 </LinearLayout>
 
@@ -215,12 +215,12 @@
                     android:layout_height="match_parent"
                     android:layout_weight="0.2" />
 
-                <android.support.design.widget.TextInputLayout
+                <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="8.5">
 
-                    <android.support.v7.widget.AppCompatEditText
+                    <androidx.appcompat.widget.AppCompatEditText
                         android:id="@+id/profileFragment_mobileInput"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -233,7 +233,7 @@
                         app:backgroundTint="@color/colorCharcoal" />
 
 
-                </android.support.design.widget.TextInputLayout>
+                </com.google.android.material.textfield.TextInputLayout>
 
             </LinearLayout>
 

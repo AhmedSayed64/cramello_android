@@ -1,4 +1,4 @@
-package net.aldar.cramello;
+package net.aldar.cramello.view;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -6,14 +6,6 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.net.Uri;
 import android.os.Bundle;
-import android.support.design.widget.NavigationView;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentTransaction;
-import android.support.v4.content.LocalBroadcastManager;
-import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.PopupMenu;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
@@ -23,6 +15,17 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.PopupMenu;
+import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
+import androidx.localbroadcastmanager.content.LocalBroadcastManager;
+
+import com.google.android.material.navigation.NavigationView;
+
+import net.aldar.cramello.R;
 import net.aldar.cramello.apiHandler.BaseApi;
 import net.aldar.cramello.apiHandler.BaseApiHandler;
 import net.aldar.cramello.fragment.AddressesFragment;
@@ -42,7 +45,6 @@ import net.aldar.cramello.services.LocaleHelper;
 import net.aldar.cramello.services.PrefsManger;
 import net.aldar.cramello.services.Utils;
 import net.aldar.cramello.services.backPressed.OnBackPressListener;
-import net.aldar.cramello.view.DcDialog;
 import net.aldar.cramello.view.listener.OnClickRetryBtn;
 
 import java.util.List;
@@ -51,10 +53,10 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-import static net.aldar.cramello.App.KEY_OPEN_NOTIFICATIONS;
-import static net.aldar.cramello.App.KEY_OPEN_ORDERS;
-import static net.aldar.cramello.App.mMontserratRegular;
-import static net.aldar.cramello.App.mRobotoRegular;
+import static net.aldar.cramello.view.App.KEY_OPEN_NOTIFICATIONS;
+import static net.aldar.cramello.view.App.KEY_OPEN_ORDERS;
+import static net.aldar.cramello.view.App.mMontserratRegular;
+import static net.aldar.cramello.view.App.mRobotoRegular;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -324,6 +326,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         } else
             Utils.makeAToast(MainActivity.this, getResources().getString(R.string.connection_offline));
     }
+
 
     private void getCategories() {
         mSpinKitLayout.setVisibility(View.VISIBLE);
@@ -860,4 +863,5 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             mNotificationUnSeenCountTv.setVisibility(View.VISIBLE);
         }
     }
+
 }

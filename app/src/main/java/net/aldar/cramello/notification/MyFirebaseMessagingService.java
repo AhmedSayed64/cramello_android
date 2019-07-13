@@ -10,18 +10,19 @@ import android.graphics.BitmapFactory;
 import android.media.RingtoneManager;
 import android.net.Uri;
 import android.os.Build;
-import android.support.v4.app.NotificationCompat;
-import android.support.v4.content.ContextCompat;
-import android.support.v4.content.LocalBroadcastManager;
 import android.util.Log;
+
+import androidx.core.app.NotificationCompat;
+import androidx.core.content.ContextCompat;
+import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 
 import com.google.firebase.messaging.FirebaseMessagingService;
 import com.google.firebase.messaging.RemoteMessage;
 
-import net.aldar.cramello.MainActivity;
 import net.aldar.cramello.R;
 import net.aldar.cramello.services.PrefsManger;
 import net.aldar.cramello.services.Utils;
+import net.aldar.cramello.view.MainActivity;
 
 import java.util.Map;
 

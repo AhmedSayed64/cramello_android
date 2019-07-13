@@ -1,6 +1,6 @@
 package net.aldar.cramello.entitie;
 
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 
 public class AddressType {
     private int id;

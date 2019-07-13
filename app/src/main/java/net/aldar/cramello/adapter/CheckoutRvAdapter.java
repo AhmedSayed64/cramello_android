@@ -1,11 +1,12 @@
 package net.aldar.cramello.adapter;
 
 import android.content.Context;
-import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+
+import androidx.recyclerview.widget.RecyclerView;
 
 import net.aldar.cramello.R;
 import net.aldar.cramello.model.response.basket.BasketLine;
@@ -13,7 +14,7 @@ import net.aldar.cramello.services.Utils;
 
 import java.util.List;
 
-import static net.aldar.cramello.App.mRobotoRegular;
+import static net.aldar.cramello.view.App.mRobotoRegular;
 
 public class CheckoutRvAdapter extends RecyclerView.Adapter<CheckoutRvAdapter.ViewHolder> {
 

@@ -5,13 +5,6 @@ import android.app.Dialog;
 import android.content.DialogInterface;
 import android.location.Geocoder;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.design.widget.TextInputLayout;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentTransaction;
-import android.support.v7.widget.AppCompatEditText;
-import android.support.v7.widget.AppCompatSpinner;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
@@ -31,6 +24,13 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.appcompat.widget.AppCompatEditText;
+import androidx.appcompat.widget.AppCompatSpinner;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
+
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
@@ -38,10 +38,10 @@ import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.CameraPosition;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.google.android.material.textfield.TextInputLayout;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
-import net.aldar.cramello.MainActivity;
 import net.aldar.cramello.R;
 import net.aldar.cramello.adapter.GovernExpListAdapter;
 import net.aldar.cramello.entitie.AddressType;
@@ -50,6 +50,7 @@ import net.aldar.cramello.model.response.governorate.Area;
 import net.aldar.cramello.model.response.governorate.Governorate;
 import net.aldar.cramello.services.GPSTracker;
 import net.aldar.cramello.services.Utils;
+import net.aldar.cramello.view.MainActivity;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
@@ -62,9 +63,9 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-import static net.aldar.cramello.App.KEY_ADDRESS_DATA;
-import static net.aldar.cramello.App.mMontserratBold;
-import static net.aldar.cramello.App.mMontserratRegular;
+import static net.aldar.cramello.view.App.KEY_ADDRESS_DATA;
+import static net.aldar.cramello.view.App.mMontserratBold;
+import static net.aldar.cramello.view.App.mMontserratRegular;
 
 public class AddAddressFragment extends RootFragment implements View.OnClickListener {
 
@@ -297,7 +298,7 @@ public class AddAddressFragment extends RootFragment implements View.OnClickList
             mFloorInput.setText(mAddress.getFloor());
 
         if (mAddress.getApartment() != null)
-            mApartmentInput.setText(String.valueOf(mAddress.getApartment()));
+            mApartmentInput.setText(mAddress.getApartment());
 
         if (mAddress.getAdditionalNotes() != null)
             mExtraInput.setText(mAddress.getAdditionalNotes());

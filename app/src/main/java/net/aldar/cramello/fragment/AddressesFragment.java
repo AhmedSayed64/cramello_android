@@ -2,11 +2,6 @@ package net.aldar.cramello.fragment;
 
 import android.app.Dialog;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.v7.widget.DividerItemDecoration;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -18,9 +13,14 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.recyclerview.widget.DividerItemDecoration;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
 import com.google.gson.Gson;
 
-import net.aldar.cramello.MainActivity;
 import net.aldar.cramello.R;
 import net.aldar.cramello.adapter.AddressesRvAdapter;
 import net.aldar.cramello.model.Address;
@@ -28,20 +28,23 @@ import net.aldar.cramello.model.response.governorate.Area;
 import net.aldar.cramello.model.response.governorate.Governorate;
 import net.aldar.cramello.model.response.product.Product;
 import net.aldar.cramello.services.Utils;
+import net.aldar.cramello.view.MainActivity;
+
+import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Comparator;
 import java.util.List;
 
+import es.dmoral.toasty.Toasty;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-import static net.aldar.cramello.App.KEY_ADDRESS_DATA;
-import static net.aldar.cramello.App.mMontserratRegular;
-import static net.aldar.cramello.MainActivity.ADD_ADDRESS_FRAGMENT_TAG;
-import static net.aldar.cramello.MainActivity.MENU_FRAGMENT_TAG;
+import static net.aldar.cramello.view.App.KEY_ADDRESS_DATA;
+import static net.aldar.cramello.view.App.mMontserratRegular;
+import static net.aldar.cramello.view.MainActivity.ADD_ADDRESS_FRAGMENT_TAG;
+import static net.aldar.cramello.view.MainActivity.MENU_FRAGMENT_TAG;
 
 public class AddressesFragment extends RootFragment implements View.OnClickListener {
 
@@ -60,6 +63,7 @@ public class AddressesFragment extends RootFragment implements View.OnClickListe
 
     public MainActivity mMainActivity;
     private Gson mGson;
+    private static String AddressesTAG = "AddressesFragment";
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -114,7 +118,7 @@ public class AddressesFragment extends RootFragment implements View.OnClickListe
 
             call.enqueue(new Callback<List<Address>>() {
                 @Override
-                public void onResponse(Call<List<Address>> call, Response<List<Address>> response) {
+                public void onResponse(@NotNull Call<List<Address>> call, @NotNull Response<List<Address>> response) {
                     mMainActivity.mSpinKitLayout.setVisibility(View.GONE);
                     if (response.isSuccessful()) {
                         try {
@@ -142,12 +146,7 @@ public class AddressesFragment extends RootFragment implements View.OnClickListe
 
     private void setupAddressesRv() {
 
-        Collections.sort(mAddressesList, new Comparator<Address>() {
-            @Override
-            public int compare(Address o1, Address o2) {
-                return o2.getId() - o1.getId();
-            }
-        });
+        Collections.sort(mAddressesList, (o1, o2) -> o2.getId() - o1.getId());
 
         for (int a = 0; a < mAddressesList.size(); a++) {
             Address address = mAddressesList.get(a);
@@ -165,7 +164,7 @@ public class AddressesFragment extends RootFragment implements View.OnClickListe
         }
 
         mAddressesRv.setLayoutManager(new LinearLayoutManager(getActivity(),
-                LinearLayoutManager.VERTICAL, false));
+                RecyclerView.VERTICAL, false));
         mAddressesRvAdapter = new AddressesRvAdapter(getActivity(), this, mAddressesList);
         mAddressesRv.setAdapter(mAddressesRvAdapter);
         mAddressesRv.addItemDecoration(new DividerItemDecoration(mAddressesRv.getContext(),
@@ -184,7 +183,7 @@ public class AddressesFragment extends RootFragment implements View.OnClickListe
         Area storedDeliveryArea = mMainActivity.mPrefsManger.getDeliveryArea();
         Area selectedArea = mAddressesList.get(position).getSelectedArea();
 
-        checkCart(selectedArea, position);
+        getArea(selectedArea.getId(), position);
 
 //        if (storedDeliveryArea != null) {
 //            if (mMainActivity.mPrefsManger.loadCart().size() != 0) {
@@ -200,6 +199,40 @@ public class AddressesFragment extends RootFragment implements View.OnClickListe
 //        } else {
 //            checkCart(selectedArea, position);
 //        }
+    }
+
+    private void getArea(int areaId, int pos) {
+
+
+        Call<Area> call = mMainActivity.mServiceApi.getArea(areaId);
+        call.enqueue(new Callback<Area>() {
+            @Override
+            public void onResponse(@NotNull Call<Area> call, @NotNull Response<Area> response) {
+
+                if (response.isSuccessful() && response.body() != null) {
+                    if (!response.body().getAvailable()) {
+                        if (response.body().getIs_busy()) {
+                            if (getActivity() != null)
+                                Toasty.error(getActivity(), getResources().getString(R.string.shop_busy), Toasty.LENGTH_LONG).show();
+                        } else if (response.body().getIs_closed()) {
+                            if (getActivity() != null)
+                                Toasty.error(getActivity(), getResources().getString(R.string.shop_close), Toasty.LENGTH_LONG).show();
+                        }
+                    }
+                    Area selectedArea = mAddressesList.get(pos).getSelectedArea();
+                    checkCart(selectedArea, pos);
+
+                }
+            }
+
+            @Override
+            public void onFailure(@NotNull Call<Area> call, @NotNull Throwable t) {
+                if (getActivity() != null)
+                    Toasty.error(getActivity(), t.getMessage()).show();
+            }
+        });
+
+
     }
 
     private void showDeliveryConfirmationDialog(Area storedDeliveryArea, final int position) {

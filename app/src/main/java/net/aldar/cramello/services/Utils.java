@@ -1,6 +1,5 @@
 package net.aldar.cramello.services;
 
-import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -14,10 +13,6 @@ import android.net.NetworkInfo;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentTransaction;
-import android.support.v7.app.AlertDialog;
 import android.text.TextUtils;
 import android.util.Base64;
 import android.util.Log;
@@ -31,6 +26,12 @@ import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
+
 import com.squareup.picasso.Callback;
 import com.squareup.picasso.Picasso;
 
@@ -41,7 +42,7 @@ import net.aldar.cramello.model.FirebaseData;
 import net.aldar.cramello.model.response.product.Product;
 
 import java.io.File;
-import java.io.UnsupportedEncodingException;
+import java.nio.charset.StandardCharsets;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
@@ -63,10 +64,7 @@ public class Utils {
         ConnectivityManager CManager = (ConnectivityManager) context
                 .getSystemService(Context.CONNECTIVITY_SERVICE);
         NetworkInfo NInfo = CManager.getActiveNetworkInfo();
-        if (NInfo != null && NInfo.isConnectedOrConnecting()) {
-            return true;
-        }
-        return false;
+        return NInfo != null && NInfo.isConnectedOrConnecting();
     }
 
     public static int getDrawerGravity(PrefsManger mPrefsManger) {
@@ -101,7 +99,7 @@ public class Utils {
         Toast.makeText(context, msg, Toast.LENGTH_LONG).show();
     }
 
-    public static void setupHideKeyboard(final Activity activity, final View view) {
+    public static void setupHideKeyboard(final AppCompatActivity activity, final View view) {
 
         if (!(view instanceof EditText)) {
             view.setOnTouchListener(new View.OnTouchListener() {
@@ -120,7 +118,7 @@ public class Utils {
         }
     }
 
-    private static void hideKeyboard(Activity activity) {
+    private static void hideKeyboard(AppCompatActivity activity) {
         try {
             View view = activity.getCurrentFocus();
             if (view != null) {
@@ -134,7 +132,7 @@ public class Utils {
 
     public static void hideKeyboardFrom(Context context, View view) {
         try {
-            InputMethodManager imm = (InputMethodManager) context.getSystemService(Activity.INPUT_METHOD_SERVICE);
+            InputMethodManager imm = (InputMethodManager) context.getSystemService(AppCompatActivity.INPUT_METHOD_SERVICE);
             imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
         } catch (Exception e) {
             e.printStackTrace();
@@ -265,10 +263,7 @@ public class Utils {
 
     public static String decodeBase64(String coded) {
         byte[] valueDecoded = new byte[0];
-        try {
-            valueDecoded = Base64.decode(coded.getBytes("UTF-8"), Base64.DEFAULT);
-        } catch (UnsupportedEncodingException e) {
-        }
+        valueDecoded = Base64.decode(coded.getBytes(StandardCharsets.UTF_8), Base64.DEFAULT);
         return new String(valueDecoded);
     }
 
@@ -282,7 +277,7 @@ public class Utils {
         alertDialog.show();
     }
 
-    public static void makeACall(Activity activity, String phone) {
+    public static void makeACall(AppCompatActivity activity, String phone) {
         try {
             Intent callIntent = new Intent(Intent.ACTION_DIAL);
             callIntent.setData(Uri.parse("tel:".concat(phone)));
@@ -293,7 +288,7 @@ public class Utils {
         }
     }
 
-    public static void openMapNavigation(Activity activity, double lat, double lng) {
+    public static void openMapNavigation(AppCompatActivity activity, double lat, double lng) {
         try {
             Uri gmmIntentUri = Uri.parse("google.navigation:q="
                     + lat + "," + lng);
@@ -305,7 +300,7 @@ public class Utils {
         }
     }
 
-    public static void shareProduct(Activity activity, String message) {
+    public static void shareProduct(AppCompatActivity activity, String message) {
         Intent share = new Intent(Intent.ACTION_SEND);
         share.setType("text/plain");
         share.putExtra(Intent.EXTRA_TEXT, message);

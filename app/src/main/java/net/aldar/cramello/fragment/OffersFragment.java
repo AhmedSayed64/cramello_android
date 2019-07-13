@@ -2,11 +2,6 @@ package net.aldar.cramello.fragment;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.v7.widget.DefaultItemAnimator;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,21 +9,27 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.recyclerview.widget.DefaultItemAnimator;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
 import com.google.gson.Gson;
 
-import net.aldar.cramello.MainActivity;
-import net.aldar.cramello.ProductDetailActivity;
 import net.aldar.cramello.R;
 import net.aldar.cramello.adapter.OffersRvAdapter;
 import net.aldar.cramello.model.response.product.Product;
 import net.aldar.cramello.services.Utils;
+import net.aldar.cramello.view.MainActivity;
+import net.aldar.cramello.view.ProductDetailActivity;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import static net.aldar.cramello.App.KEY_PRODUCT_DATA;
-import static net.aldar.cramello.App.mMontserratBold;
-import static net.aldar.cramello.App.mMontserratRegular;
+import static net.aldar.cramello.view.App.KEY_PRODUCT_DATA;
+import static net.aldar.cramello.view.App.mMontserratBold;
+import static net.aldar.cramello.view.App.mMontserratRegular;
 
 public class OffersFragment extends RootFragment implements View.OnClickListener {
 
@@ -87,7 +88,7 @@ public class OffersFragment extends RootFragment implements View.OnClickListener
         }
 
         mOffersRv.setLayoutManager(new LinearLayoutManager(getActivity(),
-                LinearLayoutManager.VERTICAL, false));
+                RecyclerView.VERTICAL, false));
         mOffersRvAdapter = new OffersRvAdapter(OffersFragment.this, mOffersList);
         mOffersRv.setAdapter(mOffersRvAdapter);
         mOffersRv.setItemAnimator(new DefaultItemAnimator());

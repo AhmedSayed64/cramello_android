@@ -1,7 +1,6 @@
 package net.aldar.cramello.adapter;
 
 import android.graphics.Paint;
-import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,16 +8,18 @@ import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
-import net.aldar.cramello.App;
-import net.aldar.cramello.CartActivity;
+import androidx.recyclerview.widget.RecyclerView;
+
 import net.aldar.cramello.R;
 import net.aldar.cramello.model.response.product.Product;
 import net.aldar.cramello.services.Utils;
+import net.aldar.cramello.view.App;
+import net.aldar.cramello.view.CartActivity;
 
 import java.util.List;
 
-import static net.aldar.cramello.App.mMontserratRegular;
-import static net.aldar.cramello.App.mRobotoRegular;
+import static net.aldar.cramello.view.App.mMontserratRegular;
+import static net.aldar.cramello.view.App.mRobotoRegular;
 
 public class CartRvAdapter extends RecyclerView.Adapter<CartRvAdapter.ViewHolder> {
 

@@ -2,8 +2,6 @@ package net.aldar.cramello.fragment;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,6 +11,9 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
@@ -21,17 +22,17 @@ import com.google.android.gms.maps.model.CameraPosition;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
-import net.aldar.cramello.MainActivity;
 import net.aldar.cramello.R;
 import net.aldar.cramello.model.response.ContactData;
 import net.aldar.cramello.services.Utils;
+import net.aldar.cramello.view.MainActivity;
 
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-import static net.aldar.cramello.App.mMontserratRegular;
-import static net.aldar.cramello.MainActivity.BRANCHES_FRAGMENT_TAG;
+import static net.aldar.cramello.view.App.mMontserratRegular;
+import static net.aldar.cramello.view.MainActivity.BRANCHES_FRAGMENT_TAG;
 
 public class ContactUsFragment extends RootFragment implements View.OnClickListener {
 

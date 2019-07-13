@@ -1,16 +1,17 @@
 package net.aldar.cramello.view;
 
 import android.content.Context;
-import android.support.v7.app.AlertDialog;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import androidx.appcompat.app.AlertDialog;
+
 import net.aldar.cramello.R;
 import net.aldar.cramello.view.listener.OnClickRetryBtn;
 
-import static net.aldar.cramello.App.mMontserratRegular;
+import static net.aldar.cramello.view.App.mMontserratRegular;
 
 public class DcDialog {
 

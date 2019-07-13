@@ -7,7 +7,7 @@ import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-import static net.aldar.cramello.App.API_BASE_URL;
+import static net.aldar.cramello.view.App.API_BASE_URL;
 
 
 public class BaseApiHandler {

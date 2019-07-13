@@ -7,7 +7,7 @@ import android.os.Bundle;
 import android.telephony.SmsMessage;
 import android.util.Log;
 
-import static net.aldar.cramello.VerificationActivity.SmsReceivedListener;
+import static net.aldar.cramello.view.VerificationActivity.SmsReceivedListener;
 
 public class ReciveSMS extends BroadcastReceiver {
 

@@ -1,14 +1,9 @@
-package net.aldar.cramello;
+package net.aldar.cramello.view;
 
-import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Paint;
 import android.os.Bundle;
-import android.support.v4.view.ViewPager;
-import android.support.v7.app.AlertDialog;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.CardView;
 import android.text.Html;
 import android.text.Spanned;
 import android.view.LayoutInflater;
@@ -22,10 +17,16 @@ import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
+import androidx.viewpager.widget.ViewPager;
+
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import com.rbrooks.indefinitepagerindicator.IndefinitePagerIndicator;
 
+import net.aldar.cramello.R;
 import net.aldar.cramello.adapter.SliderPVAdapter;
 import net.aldar.cramello.model.Address;
 import net.aldar.cramello.model.response.product.Product;
@@ -35,11 +36,11 @@ import net.aldar.cramello.services.Utils;
 
 import java.lang.reflect.Type;
 
-import static net.aldar.cramello.App.KEY_ADDRESS_DATA;
-import static net.aldar.cramello.App.KEY_PRODUCT_DATA;
-import static net.aldar.cramello.App.KEY_QTY;
-import static net.aldar.cramello.App.mMontserratRegular;
-import static net.aldar.cramello.App.mRobotoRegular;
+import static net.aldar.cramello.view.App.KEY_ADDRESS_DATA;
+import static net.aldar.cramello.view.App.KEY_PRODUCT_DATA;
+import static net.aldar.cramello.view.App.KEY_QTY;
+import static net.aldar.cramello.view.App.mMontserratRegular;
+import static net.aldar.cramello.view.App.mRobotoRegular;
 
 public class ProductDetailActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -307,7 +308,7 @@ public class ProductDetailActivity extends AppCompatActivity implements View.OnC
             Intent intent = new Intent();
             intent.putExtra(KEY_QTY, Integer.parseInt(mRequestedQtyTv.getText().toString()));
             intent.putExtra(KEY_PRODUCT_DATA, mGson.toJson(mProduct));
-            setResult(Activity.RESULT_OK, intent);
+            setResult(AppCompatActivity.RESULT_OK, intent);
         } else {
             Utils.addQuantityToCart(ProductDetailActivity.this, mPrefsManger, mItemNameTv.getText().toString(),
                     mProduct, Integer.parseInt(mRequestedQtyTv.getText().toString()));

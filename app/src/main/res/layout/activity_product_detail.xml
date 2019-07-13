@@ -33,7 +33,7 @@
                     android:id="@+id/productDetail_activity_backIv"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/back_button" />
+                    app:srcCompat="@drawable/back_button" />
 
             </LinearLayout>
 
@@ -67,7 +67,7 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="@dimen/default_1x_space"
                     android:padding="@dimen/default_1x_space"
-                    android:src="@drawable/cart" />
+                    app:srcCompat="@drawable/cart" />
 
                 <TextView
                     android:id="@+id/productDetail_activity_cartTv"
@@ -94,7 +94,7 @@
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/side_share_app" />
+                    app:srcCompat="@drawable/side_share_app" />
 
             </LinearLayout>
 
@@ -110,7 +110,7 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
-                <android.support.v7.widget.CardView
+                <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     app:cardBackgroundColor="@color/colorWhite"
@@ -140,7 +140,7 @@
                                     android:layout_height="wrap_content"
                                     android:layout_weight="2.5"
                                     android:adjustViewBounds="true"
-                                    android:src="@drawable/menu_item_placeholder" />
+                                    app:srcCompat="@drawable/menu_item_placeholder" />
 
                             </LinearLayout>
 
@@ -211,9 +211,9 @@
 
                     </LinearLayout>
 
-                </android.support.v7.widget.CardView>
+                </androidx.cardview.widget.CardView>
 
-                <android.support.v7.widget.CardView
+                <androidx.cardview.widget.CardView
                     android:id="@+id/productDetail_activity_specialCardView"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -278,9 +278,9 @@
 
                     </LinearLayout>
 
-                </android.support.v7.widget.CardView>
+                </androidx.cardview.widget.CardView>
 
-                <android.support.v7.widget.CardView
+                <androidx.cardview.widget.CardView
                     android:id="@+id/productDetail_activity_qtyCardView"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -374,7 +374,7 @@
 
                     </LinearLayout>
 
-                </android.support.v7.widget.CardView>
+                </androidx.cardview.widget.CardView>
 
                 <Button
                     android:id="@+id/productDetail_activity_addBtn"

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="@dimen/default_2x_space"
@@ -25,7 +26,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:adjustViewBounds="true"
-                android:src="@drawable/menu_item_placeholder" />
+                app:srcCompat="@drawable/menu_item_placeholder" />
 
             <ProgressBar
                 android:id="@+id/cart_item_progressBar"
@@ -175,7 +176,7 @@
             android:id="@+id/cart_item_deleteIv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/delete" />
+            app:srcCompat="@drawable/delete" />
 
     </LinearLayout>
 </LinearLayout>

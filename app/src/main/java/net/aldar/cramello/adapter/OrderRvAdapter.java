@@ -1,13 +1,14 @@
 package net.aldar.cramello.adapter;
 
 import android.content.Context;
-import android.support.v4.content.ContextCompat;
-import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import androidx.core.content.ContextCompat;
+import androidx.recyclerview.widget.RecyclerView;
 
 import net.aldar.cramello.R;
 import net.aldar.cramello.fragment.MyOrdersFragment;
@@ -16,8 +17,8 @@ import net.aldar.cramello.services.Utils;
 
 import java.util.List;
 
-import static net.aldar.cramello.App.mMontserratBold;
-import static net.aldar.cramello.App.mMontserratRegular;
+import static net.aldar.cramello.view.App.mMontserratBold;
+import static net.aldar.cramello.view.App.mMontserratRegular;
 
 public class OrderRvAdapter extends RecyclerView.Adapter<OrderRvAdapter.ViewHolder> {
 

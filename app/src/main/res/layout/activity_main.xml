@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <android.support.v4.widget.DrawerLayout
+    <androidx.drawerlayout.widget.DrawerLayout
         android:id="@+id/sideMenu_drawerLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -47,7 +47,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_margin="@dimen/default_1x_space"
                                 android:adjustViewBounds="true"
-                                android:src="@drawable/burger_menu" />
+                                app:srcCompat="@drawable/burger_menu" />
 
                         </LinearLayout>
 
@@ -100,7 +100,7 @@
                                 android:layout_height="wrap_content"
                                 android:adjustViewBounds="true"
                                 android:scaleType="fitCenter"
-                                android:src="@drawable/logo" />
+                                app:srcCompat="@drawable/logo" />
 
                         </LinearLayout>
 
@@ -142,7 +142,7 @@
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
                                             android:adjustViewBounds="true"
-                                            android:src="@drawable/location_icon" />
+                                            app:srcCompat="@drawable/location_icon" />
 
                                     </LinearLayout>
 
@@ -179,7 +179,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginStart="@dimen/default_5x_space"
-                                android:src="@drawable/flower" />
+                                app:srcCompat="@drawable/flower" />
 
                         </FrameLayout>
 
@@ -231,7 +231,7 @@
             </LinearLayout>
         </FrameLayout>
 
-        <android.support.design.widget.NavigationView
+        <com.google.android.material.navigation.NavigationView
             android:id="@+id/sideMenu_navigationView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -253,7 +253,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="@dimen/sideMenu_ad_height"
                         android:scaleType="fitXY"
-                        android:src="@drawable/sidebar_bg" />
+                        app:srcCompat="@drawable/sidebar_bg" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -283,7 +283,7 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:adjustViewBounds="true"
-                                    android:src="@drawable/side_home" />
+                                    app:srcCompat="@drawable/side_home" />
 
                             </LinearLayout>
 
@@ -364,7 +364,7 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:adjustViewBounds="true"
-                                    android:src="@drawable/side_offers" />
+                                    app:srcCompat="@drawable/side_offers" />
 
                             </LinearLayout>
 
@@ -406,7 +406,7 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:adjustViewBounds="true"
-                                    android:src="@drawable/side_orders" />
+                                    app:srcCompat="@drawable/side_orders" />
 
                             </LinearLayout>
 
@@ -448,7 +448,7 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:adjustViewBounds="true"
-                                    android:src="@drawable/side_notifications" />
+                                    app:srcCompat="@drawable/side_notifications" />
 
                             </LinearLayout>
 
@@ -511,7 +511,7 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:adjustViewBounds="true"
-                                    android:src="@drawable/side_address" />
+                                    app:srcCompat="@drawable/side_address" />
 
                             </LinearLayout>
 
@@ -553,7 +553,7 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:adjustViewBounds="true"
-                                    android:src="@drawable/side_profile" />
+                                    app:srcCompat="@drawable/side_profile" />
 
                             </LinearLayout>
 
@@ -595,7 +595,7 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:adjustViewBounds="true"
-                                    android:src="@drawable/side_contact" />
+                                    app:srcCompat="@drawable/side_contact" />
 
                             </LinearLayout>
 
@@ -637,7 +637,7 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:adjustViewBounds="true"
-                                    android:src="@drawable/side_share_app" />
+                                    app:srcCompat="@drawable/side_share_app" />
 
                             </LinearLayout>
 
@@ -689,7 +689,7 @@
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center"
                                     android:layout_margin="@dimen/default_2x_space"
-                                    android:src="@drawable/facebook" />
+                                    app:srcCompat="@drawable/facebook" />
 
                                 <ImageView
                                     android:id="@+id/sideMenu_twitterIv"
@@ -697,7 +697,7 @@
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center"
                                     android:layout_margin="@dimen/default_2x_space"
-                                    android:src="@drawable/twitter" />
+                                    app:srcCompat="@drawable/twitter" />
 
 
                                 <ImageView
@@ -706,7 +706,7 @@
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center"
                                     android:layout_margin="@dimen/default_2x_space"
-                                    android:src="@drawable/instagram" />
+                                    app:srcCompat="@drawable/instagram" />
                             </LinearLayout>
 
                             <LinearLayout
@@ -722,7 +722,7 @@
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center"
                                     android:layout_margin="@dimen/default_2x_space"
-                                    android:src="@drawable/snap" />
+                                    app:srcCompat="@drawable/snap" />
 
                                 <ImageView
                                     android:id="@+id/sideMenu_youtubeIv"
@@ -730,7 +730,7 @@
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center"
                                     android:layout_margin="@dimen/default_2x_space"
-                                    android:src="@drawable/youtube" />
+                                    app:srcCompat="@drawable/youtube" />
 
                             </LinearLayout>
 
@@ -740,6 +740,6 @@
                 </LinearLayout>
             </ScrollView>
 
-        </android.support.design.widget.NavigationView>
-    </android.support.v4.widget.DrawerLayout>
+        </com.google.android.material.navigation.NavigationView>
+    </androidx.drawerlayout.widget.DrawerLayout>
 </LinearLayout>

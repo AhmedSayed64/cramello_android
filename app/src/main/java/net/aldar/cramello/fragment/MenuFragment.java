@@ -1,14 +1,8 @@
 package net.aldar.cramello.fragment;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.v7.widget.DividerItemDecoration;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,14 +12,18 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.DividerItemDecoration;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import com.thoughtbot.expandablerecyclerview.listeners.GroupExpandCollapseListener;
 import com.thoughtbot.expandablerecyclerview.models.ExpandableGroup;
 
-import net.aldar.cramello.CartActivity;
-import net.aldar.cramello.MainActivity;
-import net.aldar.cramello.ProductDetailActivity;
 import net.aldar.cramello.R;
 import net.aldar.cramello.adapter.Expand.MenuRvAdapter;
 import net.aldar.cramello.entitie.CategoryAndProducts;
@@ -33,6 +31,9 @@ import net.aldar.cramello.model.Address;
 import net.aldar.cramello.model.response.product.Product;
 import net.aldar.cramello.model.response.product.ProductCategory;
 import net.aldar.cramello.services.Utils;
+import net.aldar.cramello.view.CartActivity;
+import net.aldar.cramello.view.MainActivity;
+import net.aldar.cramello.view.ProductDetailActivity;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
@@ -40,11 +41,11 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
-import static net.aldar.cramello.App.KEY_ADDRESS_DATA;
-import static net.aldar.cramello.App.KEY_PRODUCT_DATA;
-import static net.aldar.cramello.App.KEY_QTY;
-import static net.aldar.cramello.App.mMontserratRegular;
-import static net.aldar.cramello.MainActivity.REQUEST_PRODUCT_DETAIL;
+import static net.aldar.cramello.view.App.KEY_ADDRESS_DATA;
+import static net.aldar.cramello.view.App.KEY_PRODUCT_DATA;
+import static net.aldar.cramello.view.App.KEY_QTY;
+import static net.aldar.cramello.view.App.mMontserratRegular;
+import static net.aldar.cramello.view.MainActivity.REQUEST_PRODUCT_DETAIL;
 
 public class MenuFragment extends RootFragment implements View.OnClickListener {
 
@@ -204,7 +205,7 @@ public class MenuFragment extends RootFragment implements View.OnClickListener {
             }
         }
 
-        mProductsRv.setLayoutManager(new LinearLayoutManager(mMainActivity, LinearLayoutManager.VERTICAL, false));
+        mProductsRv.setLayoutManager(new LinearLayoutManager(mMainActivity, RecyclerView.VERTICAL, false));
         mMenuAdapter = new MenuRvAdapter(mMainActivity, MenuFragment.this, mMainActivity.mAppLanguage, mProductsList);
         mMenuAdapter.setOnGroupExpandCollapseListener(new GroupExpandCollapseListener() {
             @Override
@@ -311,7 +312,7 @@ public class MenuFragment extends RootFragment implements View.OnClickListener {
 
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
-        if (resultCode == Activity.RESULT_OK) {
+        if (resultCode == AppCompatActivity.RESULT_OK) {
             if (requestCode == REQUEST_PRODUCT_DETAIL && data != null && data.getExtras() != null) {
                 if (data.hasExtra(KEY_QTY) && data.hasExtra(KEY_PRODUCT_DATA)) {
                     String json = data.getExtras().getString(KEY_PRODUCT_DATA);

@@ -1,6 +1,5 @@
 package net.aldar.cramello.adapter;
 
-import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,16 +8,18 @@ import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
-import net.aldar.cramello.App;
+import androidx.recyclerview.widget.RecyclerView;
+
 import net.aldar.cramello.R;
 import net.aldar.cramello.fragment.NotificationsFragment;
 import net.aldar.cramello.model.response.Notification;
 import net.aldar.cramello.services.Utils;
+import net.aldar.cramello.view.App;
 
 import java.util.List;
 
-import static net.aldar.cramello.App.mMontserratRegular;
-import static net.aldar.cramello.App.mRobotoRegular;
+import static net.aldar.cramello.view.App.mMontserratRegular;
+import static net.aldar.cramello.view.App.mRobotoRegular;
 
 public class NotificationRvAdapter extends RecyclerView.Adapter<NotificationRvAdapter.ViewHolder> {
 

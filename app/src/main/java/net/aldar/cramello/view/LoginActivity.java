@@ -1,10 +1,8 @@
-package net.aldar.cramello;
+package net.aldar.cramello.view;
 
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AlertDialog;
-import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,6 +12,10 @@ import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+
+import net.aldar.cramello.R;
 import net.aldar.cramello.apiHandler.BaseApi;
 import net.aldar.cramello.apiHandler.BaseApiHandler;
 import net.aldar.cramello.model.request.ForgetPwRequest;
@@ -28,7 +30,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-import static net.aldar.cramello.App.mMontserratRegular;
+import static net.aldar.cramello.view.App.mMontserratRegular;
 
 public class LoginActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -213,7 +215,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                         mPrefsManger.setLoginToken(loginResponse.getToken());
                         mPrefsManger.saveUserData(userData);
                         mPrefsManger.setUserLogin(true);
-                        startActivity(new Intent(LoginActivity.this, AdActivity.class));
+                        startActivity(new Intent(LoginActivity.this, MainActivity.class));
                         finish();
 
                     } catch (Exception e) {

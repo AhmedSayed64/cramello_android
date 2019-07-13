@@ -1,7 +1,6 @@
 package net.aldar.cramello.services;
 
 import android.Manifest;
-import android.app.Activity;
 import android.app.Service;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -14,11 +13,13 @@ import android.os.Build;
 import android.os.Bundle;
 import android.os.IBinder;
 import android.provider.Settings;
-import android.support.annotation.Nullable;
-import android.support.v4.app.ActivityCompat;
-import android.support.v4.content.ContextCompat;
-import android.support.v7.app.AlertDialog;
 import android.util.Log;
+
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 
 import net.aldar.cramello.R;
 
@@ -185,7 +186,7 @@ public class GPSTracker extends Service implements LocationListener {
     }
 
     private void requestPermission() {
-        ActivityCompat.requestPermissions((Activity) mContext, new String[]{Manifest.permission.ACCESS_FINE_LOCATION,
+        ActivityCompat.requestPermissions((AppCompatActivity) mContext, new String[]{Manifest.permission.ACCESS_FINE_LOCATION,
                 Manifest.permission.ACCESS_COARSE_LOCATION}, PERMISSIONS_REQUEST);
     }
 

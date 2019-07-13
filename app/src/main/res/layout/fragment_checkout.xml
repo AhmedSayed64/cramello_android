@@ -33,7 +33,7 @@
                     android:id="@+id/checkoutFragment_backIv"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/back_button" />
+                    app:srcCompat="@drawable/back_button" />
 
             </LinearLayout>
 
@@ -57,7 +57,7 @@
 
         </LinearLayout>
 
-        <android.support.v4.widget.NestedScrollView
+        <androidx.core.widget.NestedScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:fillViewport="true">
@@ -77,7 +77,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:src="@drawable/no_1" />
+                        app:srcCompat="@drawable/no_1" />
 
                     <TextView
                         android:id="@+id/checkoutFragment_deliveryAddressTitle"
@@ -111,7 +111,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:src="@drawable/no_2" />
+                        app:srcCompat="@drawable/no_2" />
 
                     <TextView
                         android:id="@+id/checkoutFragment_itemsTitle"
@@ -125,7 +125,7 @@
 
                 </LinearLayout>
 
-                <android.support.v7.widget.RecyclerView
+                <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/checkoutFragment_itemsRv"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -142,7 +142,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:src="@drawable/no_3" />
+                        app:srcCompat="@drawable/no_3" />
 
                     <TextView
                         android:id="@+id/checkoutFragment_voucherTitle"
@@ -234,7 +234,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:src="@drawable/no_4" />
+                        app:srcCompat="@drawable/no_4" />
 
                     <TextView
                         android:id="@+id/checkoutFragment_payWithTitle"
@@ -268,7 +268,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
-                            android:src="@drawable/cash_icon" />
+                            app:srcCompat="@drawable/cash_icon" />
 
                         <TextView
                             android:id="@+id/checkoutFragment_cashTv"
@@ -300,7 +300,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
-                            android:src="@drawable/knet_icon" />
+                            app:srcCompat="@drawable/knet_icon" />
 
                         <TextView
                             android:id="@+id/checkoutFragment_knetTv"
@@ -333,7 +333,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
-                            android:src="@drawable/mastercard_icon" />
+                            app:srcCompat="@drawable/mastercard_icon" />
 
                         <TextView
                             android:id="@+id/checkoutFragment_visaTv"
@@ -544,6 +544,6 @@
                     android:textStyle="bold" />
 
             </LinearLayout>
-        </android.support.v4.widget.NestedScrollView>
+        </androidx.core.widget.NestedScrollView>
     </LinearLayout>
 </FrameLayout>

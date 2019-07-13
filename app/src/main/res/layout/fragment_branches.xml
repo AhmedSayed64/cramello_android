@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/gradient_toolbar"
@@ -30,7 +31,7 @@
                     android:id="@+id/branchesFragment_backIv"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/back_button" />
+                    app:srcCompat="@drawable/back_button" />
 
             </LinearLayout>
 
@@ -113,7 +114,7 @@
             </LinearLayout>
 
 
-            <android.support.v7.widget.RecyclerView
+            <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/branchesFragment_branchesRv"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"

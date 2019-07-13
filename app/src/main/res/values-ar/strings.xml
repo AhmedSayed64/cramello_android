@@ -270,5 +270,11 @@
     <string name="connection_error_tryAgain">حاول</string>
     <string name="connection_error_back">رجوع</string>
     <string name="connection_error_ok">تم</string>
+    <string name="shop_busy">عفواً \n نحن مشغولين الأن …</string>
+    <string name="shop_close">المحل الأن مغلق \nيمكنكم التواصل معنا من الساعة 7 صباحاً و لغاية الساعة 10 ليلاً</string>
+    <string name="media">صور و فيديوهات</string>
+    <string name="nodata">لا يوجد صور او فيديوهات</string>
+    <string name="open_at">يفتح : </string>
+    <string name="close_at">إغلاق : </string>
 
 </resources>

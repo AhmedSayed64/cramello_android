@@ -1,11 +1,6 @@
 package net.aldar.cramello.fragment;
 
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.v7.widget.DefaultItemAnimator;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,9 +9,14 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.recyclerview.widget.DefaultItemAnimator;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
 import com.google.gson.Gson;
 
-import net.aldar.cramello.MainActivity;
 import net.aldar.cramello.R;
 import net.aldar.cramello.adapter.OrderRvAdapter;
 import net.aldar.cramello.model.response.Order;
@@ -25,6 +25,7 @@ import net.aldar.cramello.model.response.governorate.Area;
 import net.aldar.cramello.model.response.governorate.Governorate;
 import net.aldar.cramello.model.response.product.Product;
 import net.aldar.cramello.services.Utils;
+import net.aldar.cramello.view.MainActivity;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -35,10 +36,10 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-import static net.aldar.cramello.App.KEY_ORDER_DATA;
-import static net.aldar.cramello.App.mMontserratBold;
-import static net.aldar.cramello.App.mMontserratRegular;
-import static net.aldar.cramello.MainActivity.ORDER_DETAIL_FRAGMENT_TAG;
+import static net.aldar.cramello.view.App.KEY_ORDER_DATA;
+import static net.aldar.cramello.view.App.mMontserratBold;
+import static net.aldar.cramello.view.App.mMontserratRegular;
+import static net.aldar.cramello.view.MainActivity.ORDER_DETAIL_FRAGMENT_TAG;
 
 public class MyOrdersFragment extends RootFragment implements View.OnClickListener {
 
@@ -133,7 +134,7 @@ public class MyOrdersFragment extends RootFragment implements View.OnClickListen
 
 
         mOrdersRv.setLayoutManager(new LinearLayoutManager(getActivity(),
-                LinearLayoutManager.VERTICAL, false));
+                RecyclerView.VERTICAL, false));
         mOrderRvAdapter = new OrderRvAdapter(getActivity(), this, mOrdersList);
         mOrdersRv.setAdapter(mOrderRvAdapter);
         mOrdersRv.setItemAnimator(new DefaultItemAnimator());

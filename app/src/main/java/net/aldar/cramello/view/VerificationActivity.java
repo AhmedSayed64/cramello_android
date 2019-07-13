@@ -1,10 +1,9 @@
-package net.aldar.cramello;
+package net.aldar.cramello.view;
 
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.CountDownTimer;
-import android.support.v7.app.AppCompatActivity;
 import android.text.Editable;
 import android.text.TextUtils;
 import android.text.TextWatcher;
@@ -18,9 +17,12 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
+import net.aldar.cramello.R;
 import net.aldar.cramello.apiHandler.BaseApi;
 import net.aldar.cramello.apiHandler.BaseApiHandler;
 import net.aldar.cramello.model.RegistrationData;
@@ -40,8 +42,8 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-import static net.aldar.cramello.App.KEY_REG_DATA;
-import static net.aldar.cramello.App.mMontserratRegular;
+import static net.aldar.cramello.view.App.KEY_REG_DATA;
+import static net.aldar.cramello.view.App.mMontserratRegular;
 
 public class VerificationActivity extends AppCompatActivity implements View.OnClickListener, TextWatcher, View.OnKeyListener, OnSmsReceivedListener {
 
@@ -221,7 +223,6 @@ public class VerificationActivity extends AppCompatActivity implements View.OnCl
         });
     }
 
-
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
@@ -229,12 +230,10 @@ public class VerificationActivity extends AppCompatActivity implements View.OnCl
                 if (RESEND_AVAILABLE)
                     requestVerCode(SMS_CODE);
                 break;
-
             case R.id.ver_activity_callLayout:
                 if (RESEND_AVAILABLE)
                     requestVerCode(CALL_CODE);
                 break;
-
             case R.id.ver_activity_continueBtn:
                 proceed();
                 break;
@@ -258,11 +257,11 @@ public class VerificationActivity extends AppCompatActivity implements View.OnCl
         validateCode(code);
 
 //        String decodedBase64 = Utils.decodeBase64(mVerCode.getActivationCode());
-
 //        if (code.equals(decodedBase64))
 //            sendRegisterRequest();
 //        else
 //            Utils.makeAToast(VerificationActivity.this, getResources().getString(R.string.codeNotCorrect));
+
     }
 
     private void validateCode(String code) {
@@ -364,7 +363,7 @@ public class VerificationActivity extends AppCompatActivity implements View.OnCl
                         Utils.makeAToast(VerificationActivity.this,
                                 getResources().getString(R.string.registerSuccess));
 
-                        Intent intent = new Intent(getApplicationContext(), AdActivity.class);
+                        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
                         startActivity(intent);
                         finish();

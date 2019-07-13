@@ -1,9 +1,6 @@
 package net.aldar.cramello.fragment;
 
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.v7.widget.AppCompatEditText;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
@@ -16,10 +13,14 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import net.aldar.cramello.MainActivity;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.appcompat.widget.AppCompatEditText;
+
 import net.aldar.cramello.R;
 import net.aldar.cramello.model.request.ChangePasswordRequest;
 import net.aldar.cramello.services.Utils;
+import net.aldar.cramello.view.MainActivity;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -31,10 +32,10 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-import static net.aldar.cramello.App.mMontserratLight;
-import static net.aldar.cramello.App.mMontserratRegular;
 import static net.aldar.cramello.services.Utils.PW_MAX_CHAR_NUMBER;
 import static net.aldar.cramello.services.Utils.PW_MIN_CHAR_NUMBER;
+import static net.aldar.cramello.view.App.mMontserratLight;
+import static net.aldar.cramello.view.App.mMontserratRegular;
 
 public class ChangePwFragment extends RootFragment implements View.OnClickListener, TextWatcher {
 

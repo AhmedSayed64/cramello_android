@@ -1,8 +1,6 @@
 package net.aldar.cramello.fragment;
 
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,11 +11,14 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import net.aldar.cramello.CartActivity;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+
 import net.aldar.cramello.R;
 import net.aldar.cramello.model.response.Order;
 import net.aldar.cramello.model.response.product.Product;
 import net.aldar.cramello.services.Utils;
+import net.aldar.cramello.view.CartActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -26,10 +27,10 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-import static net.aldar.cramello.App.KEY_ORDER_NAME;
-import static net.aldar.cramello.App.KEY_PAYMENT_METHOD;
-import static net.aldar.cramello.App.KEY_PAYMENT_URL;
-import static net.aldar.cramello.App.mMontserratRegular;
+import static net.aldar.cramello.view.App.KEY_ORDER_NAME;
+import static net.aldar.cramello.view.App.KEY_PAYMENT_METHOD;
+import static net.aldar.cramello.view.App.KEY_PAYMENT_URL;
+import static net.aldar.cramello.view.App.mMontserratRegular;
 
 public class PaymentFragment extends RootFragment implements View.OnClickListener {
 

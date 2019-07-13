@@ -9,15 +9,15 @@ import android.widget.TextView;
 
 import com.thoughtbot.expandablerecyclerview.viewholders.ChildViewHolder;
 
-import net.aldar.cramello.App;
 import net.aldar.cramello.R;
 import net.aldar.cramello.model.response.product.Image;
 import net.aldar.cramello.services.Utils;
+import net.aldar.cramello.view.App;
 
 import java.util.List;
 
-import static net.aldar.cramello.App.mMontserratRegular;
-import static net.aldar.cramello.App.mRobotoRegular;
+import static net.aldar.cramello.view.App.mMontserratRegular;
+import static net.aldar.cramello.view.App.mRobotoRegular;
 
 public class MenuProductAdapter extends ChildViewHolder {
 

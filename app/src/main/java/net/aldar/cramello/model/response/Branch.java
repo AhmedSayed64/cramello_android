@@ -34,6 +34,28 @@ public class Branch {
     @SerializedName("close_time")
     @Expose
     private String closeTime;
+    @SerializedName("current_open_time")
+    @Expose
+    private String current_open_time;
+    @SerializedName("current_close_time")
+    @Expose
+    private String current_close_time;
+
+    public String getCurrent_open_time() {
+        return current_open_time;
+    }
+
+    public void setCurrent_open_time(String current_open_time) {
+        this.current_open_time = current_open_time;
+    }
+
+    public String getCurrent_close_time() {
+        return current_close_time;
+    }
+
+    public void setCurrent_close_time(String current_close_time) {
+        this.current_close_time = current_close_time;
+    }
 
     public Integer getId() {
         return id;

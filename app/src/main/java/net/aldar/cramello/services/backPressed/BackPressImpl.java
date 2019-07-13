@@ -1,19 +1,19 @@
 package net.aldar.cramello.services.backPressed;
 
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 
-import net.aldar.cramello.MainActivity;
+import net.aldar.cramello.view.MainActivity;
 
 import java.util.List;
 
-import static net.aldar.cramello.MainActivity.ADDRESSES_FRAGMENT_TAG;
-import static net.aldar.cramello.MainActivity.CONTACT_FRAGMENT_TAG;
-import static net.aldar.cramello.MainActivity.HOME_TAG;
-import static net.aldar.cramello.MainActivity.NOTIFICATIONS_FRAGMENT_TAG;
-import static net.aldar.cramello.MainActivity.OFFERS_FRAGMENT_TAG;
-import static net.aldar.cramello.MainActivity.ORDERS_FRAGMENT_TAG;
-import static net.aldar.cramello.MainActivity.PROFILE_FRAGMENT_TAG;
+import static net.aldar.cramello.view.MainActivity.ADDRESSES_FRAGMENT_TAG;
+import static net.aldar.cramello.view.MainActivity.CONTACT_FRAGMENT_TAG;
+import static net.aldar.cramello.view.MainActivity.HOME_TAG;
+import static net.aldar.cramello.view.MainActivity.NOTIFICATIONS_FRAGMENT_TAG;
+import static net.aldar.cramello.view.MainActivity.OFFERS_FRAGMENT_TAG;
+import static net.aldar.cramello.view.MainActivity.ORDERS_FRAGMENT_TAG;
+import static net.aldar.cramello.view.MainActivity.PROFILE_FRAGMENT_TAG;
 
 /**
  * Created by Ahmed Moharm on 5/16/2017.
@@ -42,7 +42,7 @@ public class BackPressImpl implements OnBackPressListener {
                     tag.equals(ORDERS_FRAGMENT_TAG) || tag.equals(NOTIFICATIONS_FRAGMENT_TAG) ||
                     tag.equals(CONTACT_FRAGMENT_TAG) || tag.equals(PROFILE_FRAGMENT_TAG)) {
                 MainActivity activity = (MainActivity) parentFragment.getActivity();
-                activity.mCurrentTag = HOME_TAG;
+                MainActivity.mCurrentTag = HOME_TAG;
             }
 
             return false;

@@ -1,12 +1,15 @@
-package net.aldar.cramello;
+package net.aldar.cramello.view;
 
 import android.app.Application;
 import android.content.Context;
 import android.graphics.Typeface;
 import android.os.Environment;
-import android.support.multidex.MultiDex;
+
+import androidx.multidex.MultiDex;
 
 import com.google.firebase.FirebaseApp;
+
+import net.aldar.cramello.R;
 
 import java.io.File;
 

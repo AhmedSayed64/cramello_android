@@ -17,6 +17,7 @@ import net.aldar.cramello.model.request.VerCodeRequest;
 import net.aldar.cramello.model.request.VoucherRequest;
 import net.aldar.cramello.model.response.Ad;
 import net.aldar.cramello.model.response.Branch;
+import net.aldar.cramello.model.response.BranchesMedia;
 import net.aldar.cramello.model.response.CheckoutResponse;
 import net.aldar.cramello.model.response.ContactData;
 import net.aldar.cramello.model.response.DefaultResponse;
@@ -27,6 +28,7 @@ import net.aldar.cramello.model.response.UserData;
 import net.aldar.cramello.model.response.VerCode;
 import net.aldar.cramello.model.response.VoucherResponse;
 import net.aldar.cramello.model.response.basket.BasketValidation;
+import net.aldar.cramello.model.response.governorate.Area;
 import net.aldar.cramello.model.response.governorate.Governorate;
 import net.aldar.cramello.model.response.product.Product;
 import net.aldar.cramello.model.response.product.ProductCategory;
@@ -164,6 +166,17 @@ public interface BaseApi {
 
     @GET("api/v1/branches")
     Call<List<Branch>> getBranches(@Header("Authorization") String authorizationToken);
+
+
+    @GET("api/v1/branches/{id}")
+    Call<Branch> getBranch(@Path("id") int areaId);
+
+    @GET("api/v1/branches/{id}?use_store=true")
+    Call<BranchesMedia> getBranchMedia(@Path("id") int areaId);
+
+    @GET("api/v1/areas/{id}")
+    Call<Area> getArea(@Path("id") int areaId);
+
 
     @GET("api/v1/notification-history")
     Call<List<Notification>> getNotificationsHistory(@Header("Authorization") String authorizationToken);

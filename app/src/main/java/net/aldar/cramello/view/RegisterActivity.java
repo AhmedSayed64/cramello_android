@@ -1,9 +1,8 @@
-package net.aldar.cramello;
+package net.aldar.cramello.view;
 
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
@@ -14,8 +13,11 @@ import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.google.gson.Gson;
 
+import net.aldar.cramello.R;
 import net.aldar.cramello.apiHandler.BaseApi;
 import net.aldar.cramello.apiHandler.BaseApiHandler;
 import net.aldar.cramello.model.RegistrationData;
@@ -33,10 +35,10 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-import static net.aldar.cramello.App.KEY_REG_DATA;
-import static net.aldar.cramello.App.mMontserratRegular;
 import static net.aldar.cramello.services.Utils.PW_MAX_CHAR_NUMBER;
 import static net.aldar.cramello.services.Utils.PW_MIN_CHAR_NUMBER;
+import static net.aldar.cramello.view.App.KEY_REG_DATA;
+import static net.aldar.cramello.view.App.mMontserratRegular;
 
 public class RegisterActivity extends AppCompatActivity implements View.OnClickListener, TextWatcher {
 

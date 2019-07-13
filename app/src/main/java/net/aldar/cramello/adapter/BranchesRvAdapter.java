@@ -1,25 +1,27 @@
 package net.aldar.cramello.adapter;
 
-import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import net.aldar.cramello.MainActivity;
+import androidx.recyclerview.widget.RecyclerView;
+
 import net.aldar.cramello.R;
 import net.aldar.cramello.model.response.Branch;
 import net.aldar.cramello.services.Utils;
+import net.aldar.cramello.view.MainActivity;
 
 import java.util.List;
 
-import static net.aldar.cramello.App.mMontserratRegular;
+import static net.aldar.cramello.view.App.mMontserratRegular;
 
 public class BranchesRvAdapter extends RecyclerView.Adapter<BranchesRvAdapter.ViewHolder> {
 
     public List<Branch> mBranchList;
     private MainActivity mMainActivity;
+    BranchInterface branchInterface;
 
     public class ViewHolder extends RecyclerView.ViewHolder {
         public final View mView;
@@ -42,9 +44,10 @@ public class BranchesRvAdapter extends RecyclerView.Adapter<BranchesRvAdapter.Vi
         return mBranchList.get(position);
     }
 
-    public BranchesRvAdapter(MainActivity mainActivity, List<Branch> branches) {
+    public BranchesRvAdapter(MainActivity mainActivity, List<Branch> branches, BranchInterface branchInterface) {
         mMainActivity = mainActivity;
         mBranchList = branches;
+        this.branchInterface = branchInterface;
     }
 
     @Override
@@ -62,7 +65,6 @@ public class BranchesRvAdapter extends RecyclerView.Adapter<BranchesRvAdapter.Vi
     @Override
     public void onBindViewHolder(final ViewHolder holder, int position) {
         final Branch branch = getValueAt(position);
-
         String name;
         if (mMainActivity.mAppLanguage.contains("ar"))
             name = branch.getNameAr();
@@ -71,7 +73,13 @@ public class BranchesRvAdapter extends RecyclerView.Adapter<BranchesRvAdapter.Vi
 
         holder.mBranchNameTv.setText(name);
         holder.mBranchNameTv.setTypeface(mMontserratRegular);
+        holder.mBranchNameTv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                branchInterface.onClickBranch(branch.getId());
 
+            }
+        });
         if (branch.getPhone() != null) {
             holder.mBranchPhoneTv.setText(branch.getPhone());
             holder.mBranchPhoneTv.setTypeface(mMontserratRegular);
@@ -92,5 +100,9 @@ public class BranchesRvAdapter extends RecyclerView.Adapter<BranchesRvAdapter.Vi
                     Utils.openMapNavigation(mMainActivity, branch.getLatitude(), branch.getLongitude());
             }
         });
+    }
+
+    public interface BranchInterface {
+        void onClickBranch(int branchID);
     }
 }

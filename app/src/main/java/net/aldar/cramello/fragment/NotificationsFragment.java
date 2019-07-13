@@ -2,11 +2,6 @@ package net.aldar.cramello.fragment;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.v7.widget.DividerItemDecoration;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,15 +10,21 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.recyclerview.widget.DividerItemDecoration;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
 import com.google.gson.Gson;
 
-import net.aldar.cramello.MainActivity;
-import net.aldar.cramello.ProductDetailActivity;
 import net.aldar.cramello.R;
 import net.aldar.cramello.adapter.NotificationRvAdapter;
 import net.aldar.cramello.model.response.Notification;
 import net.aldar.cramello.model.response.product.Product;
 import net.aldar.cramello.services.Utils;
+import net.aldar.cramello.view.MainActivity;
+import net.aldar.cramello.view.ProductDetailActivity;
 
 import java.util.Collections;
 import java.util.Comparator;
@@ -33,9 +34,9 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-import static net.aldar.cramello.App.KEY_PRODUCT_DATA;
-import static net.aldar.cramello.App.mMontserratBold;
-import static net.aldar.cramello.App.mMontserratRegular;
+import static net.aldar.cramello.view.App.KEY_PRODUCT_DATA;
+import static net.aldar.cramello.view.App.mMontserratBold;
+import static net.aldar.cramello.view.App.mMontserratRegular;
 
 public class NotificationsFragment extends RootFragment implements View.OnClickListener {
 

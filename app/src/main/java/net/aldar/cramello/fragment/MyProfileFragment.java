@@ -1,9 +1,6 @@
 package net.aldar.cramello.fragment;
 
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.v7.widget.AppCompatEditText;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
@@ -15,18 +12,22 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import net.aldar.cramello.MainActivity;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.appcompat.widget.AppCompatEditText;
+
 import net.aldar.cramello.R;
 import net.aldar.cramello.model.response.UserData;
 import net.aldar.cramello.services.Utils;
+import net.aldar.cramello.view.MainActivity;
 
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-import static net.aldar.cramello.App.mMontserratBold;
-import static net.aldar.cramello.App.mMontserratRegular;
-import static net.aldar.cramello.MainActivity.CHANGE_PW_FRAGMENT_TAG;
+import static net.aldar.cramello.view.App.mMontserratBold;
+import static net.aldar.cramello.view.App.mMontserratRegular;
+import static net.aldar.cramello.view.MainActivity.CHANGE_PW_FRAGMENT_TAG;
 
 public class MyProfileFragment extends RootFragment implements View.OnClickListener, TextWatcher {
 

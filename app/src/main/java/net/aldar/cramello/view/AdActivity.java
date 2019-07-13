@@ -1,18 +1,20 @@
-package net.aldar.cramello;
+package net.aldar.cramello.view;
 
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.CountDownTimer;
-import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.iid.FirebaseInstanceId;
 import com.google.firebase.iid.InstanceIdResult;
 
+import net.aldar.cramello.R;
 import net.aldar.cramello.apiHandler.BaseApi;
 import net.aldar.cramello.apiHandler.BaseApiHandler;
 import net.aldar.cramello.model.response.Ad;
@@ -28,7 +30,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-import static net.aldar.cramello.App.mAppDirFile;
+import static net.aldar.cramello.view.App.mAppDirFile;
 
 public class AdActivity extends AppCompatActivity {
 

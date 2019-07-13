@@ -17,8 +17,8 @@ import net.aldar.cramello.services.PrefsManger;
 import java.util.ArrayList;
 import java.util.List;
 
-import static net.aldar.cramello.App.mMontserratBold;
-import static net.aldar.cramello.App.mMontserratRegular;
+import static net.aldar.cramello.view.App.mMontserratBold;
+import static net.aldar.cramello.view.App.mMontserratRegular;
 
 public class GovernExpListAdapter extends BaseExpandableListAdapter {
 

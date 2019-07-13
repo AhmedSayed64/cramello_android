@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="net.aldar.cramello">
 
     <uses-permission android:name="android.permission.INTERNET" />
@@ -9,19 +10,20 @@
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    <!--<uses-permission android:name="android.permission.RECEIVE_SMS" />-->
 
     <application
-        android:name=".App"
+        android:name=".view.App"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:largeHeap="true"
         android:roundIcon="@mipmap/ic_launcher"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".view.test"></activity>
         <activity
-            android:name=".SplashActivity"
+            android:name=".view.SplashActivity"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -30,30 +32,30 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MainActivity"
+            android:name=".view.MainActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" />
         <activity
-            android:name=".AdActivity"
+            android:name=".view.AdActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".LoginActivity"
+            android:name=".view.LoginActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" />
         <activity
-            android:name=".RegisterActivity"
+            android:name=".view.RegisterActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" />
         <activity
-            android:name=".VerificationActivity"
+            android:name=".view.VerificationActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" />
         <activity
-            android:name=".ProductDetailActivity"
+            android:name=".view.ProductDetailActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" />
         <activity
-            android:name=".CartActivity"
+            android:name=".view.CartActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" />
 
@@ -63,18 +65,14 @@
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
-        </service>
-
-        <!--<receiver android:name=".services.ReciveSMS">-->
-        <!--<intent-filter>-->
-        <!--<action android:name="android.provider.Telephony.SMS_RECEIVED" />-->
-        <!--</intent-filter>-->
-        <!--</receiver>-->
-
+        </service> <!-- <receiver android:name=".services.ReciveSMS"> -->
+        <!-- <intent-filter> -->
+        <!-- <action android:name="android.provider.Telephony.SMS_RECEIVED" /> -->
+        <!-- </intent-filter> -->
+        <!-- </receiver> -->
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_Api_Key" />
-
     </application>
 
 </manifest>

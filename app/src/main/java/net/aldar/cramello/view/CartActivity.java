@@ -1,13 +1,8 @@
-package net.aldar.cramello;
+package net.aldar.cramello.view;
 
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v4.app.FragmentTransaction;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.DefaultItemAnimator;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -15,9 +10,16 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentTransaction;
+import androidx.recyclerview.widget.DefaultItemAnimator;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
+import net.aldar.cramello.R;
 import net.aldar.cramello.adapter.CartRvAdapter;
 import net.aldar.cramello.apiHandler.BaseApi;
 import net.aldar.cramello.apiHandler.BaseApiHandler;
@@ -26,35 +28,44 @@ import net.aldar.cramello.model.Address;
 import net.aldar.cramello.model.Basket;
 import net.aldar.cramello.model.request.BasketLineRequest;
 import net.aldar.cramello.model.request.BasketValidationRequest;
+import net.aldar.cramello.model.response.Branch;
 import net.aldar.cramello.model.response.UserData;
 import net.aldar.cramello.model.response.basket.BasketLine;
 import net.aldar.cramello.model.response.basket.BasketValidation;
 import net.aldar.cramello.model.response.basket.Validation;
+import net.aldar.cramello.model.response.governorate.Area;
 import net.aldar.cramello.model.response.product.Product;
 import net.aldar.cramello.services.LocaleHelper;
 import net.aldar.cramello.services.PrefsManger;
 import net.aldar.cramello.services.Utils;
-import net.aldar.cramello.view.DcDialog;
 import net.aldar.cramello.view.listener.OnClickRetryBtn;
 
-import java.lang.reflect.Type;
-import java.util.ArrayList;
-import java.util.List;
+import org.jetbrains.annotations.NotNull;
 
+import java.lang.reflect.Type;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+import java.util.Locale;
+
+import es.dmoral.toasty.Toasty;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-import static net.aldar.cramello.App.KEY_ADDRESS_DATA;
-import static net.aldar.cramello.App.KEY_OPEN_ORDERS;
-import static net.aldar.cramello.App.KEY_PAYMENT_URL;
-import static net.aldar.cramello.App.mMontserratRegular;
+import static net.aldar.cramello.view.App.KEY_ADDRESS_DATA;
+import static net.aldar.cramello.view.App.KEY_OPEN_ORDERS;
+import static net.aldar.cramello.view.App.KEY_PAYMENT_URL;
+import static net.aldar.cramello.view.App.mMontserratRegular;
 
 public class CartActivity extends AppCompatActivity implements View.OnClickListener {
 
     public static final String CHECK_OUT_FRAGMENT_TAG = "CheckoutFragment";
     public static final String CONG_FRAGMENT_TAG = "CongratulationsFragment";
     public static final String PAYMENT_FRAGMENT_TAG = "PaymentFragment";
+    public static final String CartActivity_TAG = "CartActivity";
 
     private static final int ERROR_UPDATE_BASKET = 11;
     private static final int ERROR_POST_MODIFY_BASKET_LINES = 22;
@@ -63,38 +74,30 @@ public class CartActivity extends AppCompatActivity implements View.OnClickListe
     private static final int ERROR_GET_BASKET = 55;
 
     private double mSubTotal;
-//    private double mMinOrder;
-
-    private TextView mTitleTv;
+    public LinearLayout mSpinKitLayout;
     private LinearLayout mBackLayout;
     private ImageView mBackIv;
-
     private LinearLayout mEmptyLayout;
     private TextView mEmptyTv;
     private Button mAddItemsBtn;
-
     private LinearLayout mSummaryLayout;
     private TextView mSubTotalTitle;
     private TextView mSubTotalTv;
-
     private Button mAddMoreBtn;
     private Button mCheckoutBtn;
-
-    public LinearLayout mSpinKitLayout;
-
     private RecyclerView mCartRv;
     private CartRvAdapter mCartRvAdapter;
+    //    private double mMinOrder;
+    private TextView mTitleTv;
     public List<Product> mCartList;
-
     public PrefsManger mPrefsManger;
     public BaseApi mServiceApi;
     public String mAppLanguage;
     public String mAuthToken;
-
     private List<Integer> mBasketLinesIds;
+    private List<BasketLineRequest> mBasketLineRequestsList;
     public Basket mBasket;
     public Address mAddress;
-    private List<BasketLineRequest> mBasketLineRequestsList;
 
     @Override
     protected void attachBaseContext(Context newBase) {
@@ -106,10 +109,8 @@ public class CartActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cart);
-
 //        if (getIntent().hasExtra(KEY_MIN_ORDER_VALUE))
 //            mMinOrder = getIntent().getExtras().getDouble(KEY_MIN_ORDER_VALUE);
-
         if (getIntent().hasExtra(KEY_ADDRESS_DATA)) {
             String json = getIntent().getExtras().getString(KEY_ADDRESS_DATA);
             Type type = new TypeToken<Address>() {
@@ -121,19 +122,14 @@ public class CartActivity extends AppCompatActivity implements View.OnClickListe
         mServiceApi = BaseApiHandler.setupBaseApi().create(BaseApi.class);
         mAppLanguage = mPrefsManger.getAppLanguage();
         mAuthToken = "Token ".concat(mPrefsManger.getLoginToken());
-
         mSpinKitLayout = findViewById(R.id.cart_spinKit_layout);
-
         mTitleTv = findViewById(R.id.cart_activity_title);
         mTitleTv.setTypeface(mMontserratRegular);
-
         mBackLayout = findViewById(R.id.cart_activity_backLayout);
         mBackIv = findViewById(R.id.cart_activity_backIv);
         mBackLayout.setOnClickListener(this);
         Utils.submitRotation(mBackIv, mPrefsManger);
-
         mSummaryLayout = findViewById(R.id.cart_activity_summaryLayout);
-
         mEmptyLayout = findViewById(R.id.cart_activity_emptyLayout);
         mEmptyTv = findViewById(R.id.cart_activity_emptyTv);
         mEmptyTv.setTypeface(mMontserratRegular);
@@ -142,31 +138,26 @@ public class CartActivity extends AppCompatActivity implements View.OnClickListe
         mAddItemsBtn.setOnClickListener(this);
         mAddItemsBtn.setTypeface(mMontserratRegular);
         mEmptyLayout.setVisibility(View.GONE);
-
         mSubTotalTitle = findViewById(R.id.cart_activity_totalTitle);
         mSubTotalTitle.setTypeface(mMontserratRegular);
         mSubTotalTv = findViewById(R.id.cart_activity_totalTv);
         mSubTotalTv.setTypeface(mMontserratRegular);
-
         mAddMoreBtn = findViewById(R.id.cart_activity_addMoreBtn);
         mAddMoreBtn.setTypeface(mMontserratRegular);
         mAddMoreBtn.setOnClickListener(this);
-
         mCheckoutBtn = findViewById(R.id.cart_activity_checkOutBtn);
         mCheckoutBtn.setTypeface(mMontserratRegular);
         mCheckoutBtn.setOnClickListener(this);
-
         mCartRv = findViewById(R.id.cart_activity_itemsRv);
         setupCartRv();
     }
 
     private void setupCartRv() {
         mCartRv.setLayoutManager(new LinearLayoutManager(this,
-                LinearLayoutManager.VERTICAL, false));
+                RecyclerView.VERTICAL, false));
         mCartRvAdapter = new CartRvAdapter(this, mCartList);
         mCartRv.setAdapter(mCartRvAdapter);
         mCartRv.setItemAnimator(new DefaultItemAnimator());
-
         checkEmptyList();
         updateSubTotal();
     }
@@ -191,10 +182,91 @@ public class CartActivity extends AppCompatActivity implements View.OnClickListe
                     Utils.makeAToast(CartActivity.this, text);
                     return;
                 }
+                Log.d(CartActivity_TAG, String.valueOf(mAddress.getArea()));
                 mPrefsManger.saveCart(mCartList);
-                updateBasketArea();
+
+                getArea(mAddress.getArea());
+                //  updateBasketArea();
                 break;
         }
+    }
+
+    private void getArea(int areaId) {
+
+
+        Call<Area> call = mServiceApi.getArea(areaId);
+        call.enqueue(new Callback<Area>() {
+            @Override
+            public void onResponse(@NotNull Call<Area> call, @NotNull Response<Area> response) {
+
+                if (response.isSuccessful() && response.body() != null) {
+                    if (response.body().getAvailable() && response.body().getStatus() == 1) {
+                        updateBasketArea();
+                    } else if (!response.body().getAvailable()) {
+                        Log.d(CartActivity_TAG, "FalseAvailable");
+                        if (response.body().getIs_busy()) {
+                            Toasty.error(getApplicationContext(), getResources().getString(R.string.shop_busy), Toasty.LENGTH_LONG).show();
+                        } else if (response.body().getIs_closed()) {
+                            Toasty.error(getApplicationContext(), getResources().getString(R.string.shop_close), Toasty.LENGTH_LONG).show();
+                        }
+//                        for (int id : response.body().getBranches())
+//                            getBranch(id);
+
+                    }
+                }
+            }
+
+            @Override
+            public void onFailure(@NotNull Call<Area> call, @NotNull Throwable t) {
+
+                Toasty.error(getApplicationContext(), t.getMessage()).show();
+            }
+        });
+
+
+    }
+
+    private void getBranch(int branchID) {
+
+
+        Call<Branch> call = mServiceApi.getBranch(branchID);
+        call.enqueue(new Callback<Branch>() {
+            @Override
+            public void onResponse(@NotNull Call<Branch> call, @NotNull Response<Branch> response) {
+
+                if (response.isSuccessful() && response.body() != null) {
+
+                    SimpleDateFormat sdf = new SimpleDateFormat("HH:mm:ss", Locale.US);
+                    String currentDateandTime = sdf.format(new Date());
+                    try {
+                        Date currentTime = sdf.parse(currentDateandTime);
+                        Date openTime = sdf.parse(response.body().getOpenTime());
+                        Date closeTime = sdf.parse(response.body().getCloseTime());
+                        Log.d(CartActivity_TAG, "from time");
+
+                        if (currentTime.getTime() >= openTime.getTime() && currentTime.getTime() <= closeTime.getTime()) {
+                            Toasty.error(getApplicationContext(), getResources().getString(R.string.shop_busy), Toasty.LENGTH_LONG).show();
+                        } else {
+                            Toasty.error(getApplicationContext(), getResources().getString(R.string.shop_close), Toasty.LENGTH_LONG).show();
+
+                        }
+
+
+                    } catch (ParseException e) {
+                        e.printStackTrace();
+                    }
+                    Log.d(CartActivity_TAG, String.valueOf(currentDateandTime));
+
+                }
+            }
+
+            @Override
+            public void onFailure(@NotNull Call<Branch> call, @NotNull Throwable t) {
+                Toasty.error(getApplicationContext(), t.getMessage()).show();
+
+            }
+        });
+
     }
 
     private void updateBasketArea() {

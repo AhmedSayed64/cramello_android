@@ -1,6 +1,6 @@
 package net.aldar.cramello.fragment;
 
-import android.support.v4.app.Fragment;
+import androidx.fragment.app.Fragment;
 
 import net.aldar.cramello.services.backPressed.BackPressImpl;
 import net.aldar.cramello.services.backPressed.OnBackPressListener;

@@ -190,7 +190,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:src="@drawable/sms_icon" />
+                        app:srcCompat="@drawable/sms_icon" />
 
                     <TextView
                         android:id="@+id/ver_activity_reSmsTv"
@@ -224,7 +224,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:src="@drawable/call_icon" />
+                        app:srcCompat="@drawable/call_icon" />
 
                     <TextView
                         android:id="@+id/ver_activity_callTv"

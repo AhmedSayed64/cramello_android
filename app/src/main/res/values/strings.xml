@@ -2,7 +2,7 @@
     <string name="app_name">Cramello</string>
     <string name="arabic">العربية</string>
     <string name="english">English</string>
-    <string name="google_maps_Api_Key">AIzaSyBA3J7Wbko8T-6JCK9d0rYxfmdWOEMsyMY</string>
+    <string name="google_maps_Api_Key">AIzaSyBsq1siWtldnBKfoIZYby6uruIWSYivaVA</string>
 
     <string name="home">Home</string>
     <string name="menu">Menu</string>
@@ -268,4 +268,10 @@
     <string name="connection_error_tryAgain">Retry</string>
     <string name="connection_error_back">Back</string>
     <string name="connection_error_ok">Ok</string>
+    <string name="shop_busy">Sorry \n  We are busy now …</string>
+    <string name="shop_close">Branch is closed now \n You can contact with us from 7 am to 10 pm</string>
+    <string name="media">Images &amp; Videos</string>
+    <string name="nodata">No data for images and videos</string>
+    <string name="open_at">Open At :</string>
+    <string name="close_at">Close At :</string>
 </resources>

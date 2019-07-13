@@ -10,7 +10,7 @@ import com.thoughtbot.expandablerecyclerview.viewholders.GroupViewHolder;
 import net.aldar.cramello.R;
 import net.aldar.cramello.entitie.CategoryAndProducts;
 
-import static net.aldar.cramello.App.mMontserratRegular;
+import static net.aldar.cramello.view.App.mMontserratRegular;
 
 public class MenuCategoryAdapter extends GroupViewHolder {
 

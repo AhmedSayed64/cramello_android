@@ -1,7 +1,6 @@
 package net.aldar.cramello.adapter;
 
 import android.content.Context;
-import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,14 +8,16 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import androidx.recyclerview.widget.RecyclerView;
+
 import net.aldar.cramello.R;
 import net.aldar.cramello.fragment.AddressesFragment;
 import net.aldar.cramello.model.Address;
 
 import java.util.List;
 
-import static net.aldar.cramello.App.mMontserratBold;
-import static net.aldar.cramello.App.mMontserratRegular;
+import static net.aldar.cramello.view.App.mMontserratBold;
+import static net.aldar.cramello.view.App.mMontserratRegular;
 
 public class AddressesRvAdapter extends RecyclerView.Adapter<AddressesRvAdapter.ViewHolder> {
 
@@ -148,7 +149,7 @@ public class AddressesRvAdapter extends RecyclerView.Adapter<AddressesRvAdapter.
 
         if (address.getApartment() != null && !address.getApartment().isEmpty()) {
             if (others.isEmpty())
-                others = String.valueOf(address.getApartment());
+                others = address.getApartment();
             else
                 others = others.concat(", ").concat(String.valueOf(address.getApartment()));
         }

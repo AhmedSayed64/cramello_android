@@ -1,7 +1,6 @@
 package net.aldar.cramello.adapter;
 
 import android.graphics.Paint;
-import android.support.v7.widget.RecyclerView;
 import android.text.Html;
 import android.text.Spanned;
 import android.view.LayoutInflater;
@@ -11,6 +10,8 @@ import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
+import androidx.recyclerview.widget.RecyclerView;
+
 import net.aldar.cramello.R;
 import net.aldar.cramello.fragment.OffersFragment;
 import net.aldar.cramello.model.response.product.Product;
@@ -18,8 +19,8 @@ import net.aldar.cramello.services.Utils;
 
 import java.util.List;
 
-import static net.aldar.cramello.App.mMontserratRegular;
-import static net.aldar.cramello.App.mRobotoRegular;
+import static net.aldar.cramello.view.App.mMontserratRegular;
+import static net.aldar.cramello.view.App.mRobotoRegular;
 
 public class OffersRvAdapter extends RecyclerView.Adapter<OffersRvAdapter.ViewHolder> {
 

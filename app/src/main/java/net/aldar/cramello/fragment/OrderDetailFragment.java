@@ -1,11 +1,6 @@
 package net.aldar.cramello.fragment;
 
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.v7.widget.DefaultItemAnimator;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,10 +8,15 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.recyclerview.widget.DefaultItemAnimator;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
-import net.aldar.cramello.MainActivity;
 import net.aldar.cramello.R;
 import net.aldar.cramello.adapter.CheckoutRvAdapter;
 import net.aldar.cramello.model.Address;
@@ -24,16 +24,17 @@ import net.aldar.cramello.model.response.Order;
 import net.aldar.cramello.model.response.governorate.Area;
 import net.aldar.cramello.model.response.governorate.Governorate;
 import net.aldar.cramello.services.Utils;
+import net.aldar.cramello.view.MainActivity;
 
 import java.lang.reflect.Type;
 
-import static net.aldar.cramello.App.CASH;
-import static net.aldar.cramello.App.KEY_ORDER_DATA;
-import static net.aldar.cramello.App.KNET;
-import static net.aldar.cramello.App.VISA;
-import static net.aldar.cramello.App.mMontserratBold;
-import static net.aldar.cramello.App.mMontserratLight;
-import static net.aldar.cramello.App.mMontserratRegular;
+import static net.aldar.cramello.view.App.CASH;
+import static net.aldar.cramello.view.App.KEY_ORDER_DATA;
+import static net.aldar.cramello.view.App.KNET;
+import static net.aldar.cramello.view.App.VISA;
+import static net.aldar.cramello.view.App.mMontserratBold;
+import static net.aldar.cramello.view.App.mMontserratLight;
+import static net.aldar.cramello.view.App.mMontserratRegular;
 
 public class OrderDetailFragment extends RootFragment implements View.OnClickListener {
 
@@ -236,7 +237,7 @@ public class OrderDetailFragment extends RootFragment implements View.OnClickLis
 
         if (selectedAddress.getApartment() != null) {
             if (others.isEmpty())
-                others = String.valueOf(selectedAddress.getApartment());
+                others = selectedAddress.getApartment();
             else
                 others = others.concat(", ").concat(String.valueOf(selectedAddress.getApartment()));
         }
