@@ -175,7 +175,6 @@ public class ContactUsFragment extends RootFragment implements View.OnClickListe
                         .build();
                 googleMap.animateCamera(CameraUpdateFactory.newCameraPosition(cameraPosition));
                 googleMap.addMarker(new MarkerOptions().position(location));
-
                 googleMap.getUiSettings().setScrollGesturesEnabled(false);
                 googleMap.getUiSettings().setZoomGesturesEnabled(false);
             }

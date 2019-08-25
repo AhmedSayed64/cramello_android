@@ -13,7 +13,6 @@ public class LocaleHelper extends ContextWrapper {
         super(base);
     }
 
-    @SuppressWarnings("deprecation")
     public static ContextWrapper wrap(Context context, String language) {
         Configuration config = context.getResources().getConfiguration();
         if (!language.equals("")) {
@@ -34,7 +33,6 @@ public class LocaleHelper extends ContextWrapper {
         return new LocaleHelper(context);
     }
 
-    @SuppressWarnings("deprecation")
     public static Locale getSystemLocaleLegacy(Configuration config) {
         return config.locale;
     }
@@ -44,7 +42,6 @@ public class LocaleHelper extends ContextWrapper {
         return config.getLocales().get(0);
     }
 
-    @SuppressWarnings("deprecation")
     public static void setSystemLocaleLegacy(Configuration config, Locale locale) {
         config.locale = locale;
     }
